@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package code.main;
 
 /**
  *
@@ -133,7 +133,7 @@ public class Home extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 50, 40));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgrounds/main/home.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/backgrounds/home.png"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1220, 660));
 
         setSize(new java.awt.Dimension(930, 660));
