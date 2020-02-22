@@ -5,7 +5,6 @@
  */
 package mukip;
 
-
 /**
  *
  * @author hp
@@ -17,7 +16,6 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
-        
     }
 
     /**
@@ -48,11 +46,6 @@ public class Home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
-        addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                formKeyTyped(evt);
-            }
-        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
@@ -141,25 +134,12 @@ public class Home extends javax.swing.JFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 50, 40));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/background.png"))); // NOI18N
-        fondo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                fondoKeyTyped(evt);
-            }
-        });
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1220, 660));
 
         setSize(new java.awt.Dimension(930, 660));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void fondoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fondoKeyTyped
-        //ignorar
-    }//GEN-LAST:event_fondoKeyTyped
-
-    private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
-        //ignorar
-    }//GEN-LAST:event_formKeyTyped
-    /**/
+/**/
     /**
      * @param args the command line arguments
      */
@@ -192,7 +172,7 @@ public class Home extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Home().setVisible(true);
-            }  
+            }
         });
     }
 
