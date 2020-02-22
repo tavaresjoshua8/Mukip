@@ -118,22 +118,22 @@ public class Home extends javax.swing.JFrame {
         jLabel4.setText("PROGRAMA EDUCATIVO");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/locked.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/locked.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 50, 40));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/locked.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/locked.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, 50, 40));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/locked.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/locked.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, 50, 40));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/locked.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/locked.png"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 50, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/locked.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/locked.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 50, 40));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/background.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/background.png"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1220, 660));
 
         setSize(new java.awt.Dimension(930, 660));
