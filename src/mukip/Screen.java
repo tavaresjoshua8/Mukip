@@ -41,7 +41,7 @@ public class Screen extends javax.swing.JFrame {
         progressBar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(progressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 270, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/loadingScreen.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/loadingScreen.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 300, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
