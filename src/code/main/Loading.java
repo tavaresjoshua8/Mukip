@@ -18,7 +18,27 @@ public class Loading extends javax.swing.JFrame {
      */
     public Loading() {
         initComponents();
+        preparePhrases();
     }
+    
+   private void preparePhrases(){
+       String[] phrases = {
+           "Consejo de Prueba 1",
+           "Consejo de Prueba 2",
+           "Consejo de Prueba 3",
+           "Consejo de Prueba 4",
+           "Consejo de Prueba 5",
+           "Consejo de Prueba 6",
+           "Consejo de Prueba 7",
+           "Consejo de Prueba 8",
+           "Consejo de Prueba 9",
+           "Consejo de Prueba 10"
+       };
+       
+       int selectedPhrase = (int) Math.round( Math.random() * (phrases.length + 1) ) - 1;
+       
+       this.phrase.setText( phrases[selectedPhrase] );
+   }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,6 +51,7 @@ public class Loading extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         progressBar = new javax.swing.JProgressBar();
+        phrase = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,6 +63,10 @@ public class Loading extends javax.swing.JFrame {
         progressBar.setForeground(new java.awt.Color(0, 153, 204));
         progressBar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(progressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 270, 20));
+
+        phrase.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        phrase.setText("phrase");
+        jPanel1.add(phrase, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 240, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/backgrounds/loading.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 300, 530));
@@ -99,7 +124,7 @@ public class Loading extends javax.swing.JFrame {
         
         try{
             for(int i = 0; i <=100; i++){
-                Thread.sleep(40);
+                Thread.sleep(80);
                 load.progressBar.setValue(i);
             }
         }catch(Exception E){}
@@ -112,6 +137,7 @@ public class Loading extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel phrase;
     private javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables
 }
