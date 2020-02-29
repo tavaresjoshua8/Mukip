@@ -66,7 +66,7 @@ public class Tutorial extends javax.swing.JFrame {
         jLabel5.setText("Para comenzar con el tutorial, haz clic en la bandera.");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 630, 610, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/flagIcon.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/flagIcon.png"))); // NOI18N
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
 
@@ -75,7 +75,7 @@ public class Tutorial extends javax.swing.JFrame {
         jLabel7.setText("Aquí verás todas las mecanicas con las que este programa cuenta!");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 780, 40));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/backgrounds/home.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/backgrounds/home.png"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 680));
 
         setSize(new java.awt.Dimension(908, 682));

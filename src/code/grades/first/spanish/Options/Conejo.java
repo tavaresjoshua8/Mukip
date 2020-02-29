@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.grades.first;
+package code.grades.first.spanish.Options;
 
+import code.grades.first.spanish.DragAndDrop.NameToImage;
 import code.main.Home;
 import java.awt.Color;
 
@@ -12,15 +13,16 @@ import java.awt.Color;
  *
  * @author admin
  */
-public class Escribir3 extends javax.swing.JFrame {
+public class Conejo extends javax.swing.JFrame {
 
     /**
-     * Creates new form Escribir3
+     * Creates new form Conejo
      */
-    public Escribir3() {
+    public Conejo() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,24 +33,24 @@ public class Escribir3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        grupoZapatoxD = new javax.swing.ButtonGroup();
+        grupoJoneco = new javax.swing.ButtonGroup();
         volver = new javax.swing.JButton();
         siguiente = new javax.swing.JButton();
+        expresion = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        n = new javax.swing.JLabel();
-        z1 = new javax.swing.JRadioButton();
-        z2 = new javax.swing.JRadioButton();
-        b = new javax.swing.JLabel();
-        z3 = new javax.swing.JRadioButton();
-        m = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        expresion = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        m = new javax.swing.JLabel();
+        c3 = new javax.swing.JRadioButton();
+        b = new javax.swing.JLabel();
+        c2 = new javax.swing.JRadioButton();
+        n = new javax.swing.JLabel();
+        c1 = new javax.swing.JRadioButton();
+        jPanel3 = new javax.swing.JPanel();
         background = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -71,7 +73,7 @@ public class Escribir3 extends javax.swing.JFrame {
                 volverActionPerformed(evt);
             }
         });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 570, 170, 40));
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 180, 40));
 
         siguiente.setBackground(new java.awt.Color(255, 255, 255));
         siguiente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -82,7 +84,10 @@ public class Escribir3 extends javax.swing.JFrame {
                 siguienteActionPerformed(evt);
             }
         });
-        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 570, 190, 40));
+        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 590, 180, 40));
+
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
+        getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
 
         title.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
         title.setForeground(new java.awt.Color(0, 204, 204));
@@ -100,59 +105,10 @@ public class Escribir3 extends javax.swing.JFrame {
         jLabel7.setText("Completa la palabra.");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 210, -1));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        n.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        n.setText("Pazato");
-        jPanel4.add(n, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 40));
-
-        grupoZapatoxD.add(z1);
-        z1.setSelected(true);
-        z1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                z1ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(z1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        grupoZapatoxD.add(z2);
-        z2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                z2ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(z2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
-
-        b.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        b.setText("Zapato");
-        jPanel4.add(b, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, 40));
-
-        grupoZapatoxD.add(z3);
-        z3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                z3ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(z3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
-
-        m.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        m.setText("Topaza");
-        jPanel4.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, 40));
-
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 570, 60));
-
-        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 590, 80));
-
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
-        getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/Papato.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Conejo.jpg"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 290, 250));
@@ -161,7 +117,53 @@ public class Escribir3 extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 310, 270));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/backgrounds/paisaje4.jpg"))); // NOI18N
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        m.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        m.setText("Conejo");
+        jPanel4.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, 40));
+
+        grupoJoneco.add(c3);
+        c3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c3ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(c3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 20, -1));
+
+        b.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        b.setText("Nejoco");
+        jPanel4.add(b, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, 40));
+
+        grupoJoneco.add(c2);
+        c2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(c2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
+
+        n.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        n.setText("Joneco");
+        jPanel4.add(n, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 40));
+
+        grupoJoneco.add(c1);
+        c1.setSelected(true);
+        c1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 570, 60));
+
+        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 590, 80));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -198,8 +200,8 @@ public class Escribir3 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void volver(){
-        new Escribir2().setVisible(true);
+    public void volver() {
+        new Zapato().setVisible(true);
         dispose();
     }
     
@@ -208,28 +210,28 @@ public class Escribir3 extends javax.swing.JFrame {
     }//GEN-LAST:event_volverActionPerformed
 
     public void verificar(){
-        if(z1.isSelected()){
+        if(c1.isSelected()){
             n.setForeground(Color.RED);
             b.setForeground(Color.BLACK);
             m.setForeground(Color.BLACK);
             expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
         }
-        if(z2.isSelected()){
-            b.setForeground(Color.GREEN);
+        if(c2.isSelected()){
+            b.setForeground(Color.RED);
             n.setForeground(Color.BLACK);
             m.setForeground(Color.BLACK);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
-        }
-        if(z3.isSelected()){
-            m.setForeground(Color.RED);
-            b.setForeground(Color.BLACK);
-            n.setForeground(Color.BLACK);
             expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
+        }
+        if(c3.isSelected()){
+            m.setForeground(Color.GREEN);
+            n.setForeground(Color.BLACK);
+            b.setForeground(Color.BLACK);
+            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
         }
     }
     
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        Escribir4 E1 = new Escribir4();
+        NameToImage E1 = new NameToImage();
         E1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_siguienteActionPerformed
@@ -247,24 +249,24 @@ public class Escribir3 extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        new Escribir2().setVisible(true);
+        new Zapato().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void z2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_z2ActionPerformed
+    private void c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c2ActionPerformed
         // TODO add your handling code here:
         verificar();
-    }//GEN-LAST:event_z2ActionPerformed
+    }//GEN-LAST:event_c2ActionPerformed
 
-    private void z1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_z1ActionPerformed
+    private void c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c1ActionPerformed
         // TODO add your handling code here:
         verificar();
-    }//GEN-LAST:event_z1ActionPerformed
+    }//GEN-LAST:event_c1ActionPerformed
 
-    private void z3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_z3ActionPerformed
+    private void c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c3ActionPerformed
         // TODO add your handling code here:
         verificar();
-    }//GEN-LAST:event_z3ActionPerformed
+    }//GEN-LAST:event_c3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,13 +285,13 @@ public class Escribir3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Escribir3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conejo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Escribir3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conejo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Escribir3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conejo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Escribir3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Conejo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -297,7 +299,7 @@ public class Escribir3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Escribir3().setVisible(true);
+                new Conejo().setVisible(true);
             }
         });
     }
@@ -307,8 +309,11 @@ public class Escribir3 extends javax.swing.JFrame {
     private javax.swing.JMenuItem Salir;
     private javax.swing.JLabel b;
     private javax.swing.JLabel background;
+    private javax.swing.JRadioButton c1;
+    private javax.swing.JRadioButton c2;
+    private javax.swing.JRadioButton c3;
     private javax.swing.JLabel expresion;
-    private javax.swing.ButtonGroup grupoZapatoxD;
+    private javax.swing.ButtonGroup grupoJoneco;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -325,8 +330,5 @@ public class Escribir3 extends javax.swing.JFrame {
     private javax.swing.JButton siguiente;
     private javax.swing.JLabel title;
     private javax.swing.JButton volver;
-    private javax.swing.JRadioButton z1;
-    private javax.swing.JRadioButton z2;
-    private javax.swing.JRadioButton z3;
     // End of variables declaration//GEN-END:variables
 }
