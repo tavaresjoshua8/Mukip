@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.grades.first;
-
+package code.grades.first.spanish.Write;
 
 import code.main.Home;
 import java.awt.Color;
@@ -13,20 +12,19 @@ import java.awt.Color;
  *
  * @author admin
  */
-public class Escribir2 extends javax.swing.JFrame {
+public class Galleta extends javax.swing.JFrame {
 
-    boolean back=false;
+    boolean back = false;
     /**
-     * Creates new form Escribir2
+     * Creates new form Galleta
      */
-    public Escribir2() {
+    public Galleta() {
         initComponents();
         setLocationRelativeTo(null);
         a.requestFocus();
     }
 
-
-    
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,14 +36,16 @@ public class Escribir2 extends javax.swing.JFrame {
 
         volver = new javax.swing.JButton();
         siguiente = new javax.swing.JButton();
-        o = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        t = new javax.swing.JTextField();
         a = new javax.swing.JTextField();
-        r = new javax.swing.JTextField();
+        M = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        e = new javax.swing.JTextField();
         i = new javax.swing.JTextField();
-        expresion = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        expresion = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -83,19 +83,25 @@ public class Escribir2 extends javax.swing.JFrame {
                 siguienteActionPerformed(evt);
             }
         });
-        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 580, 180, 40));
+        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 580, 170, 40));
 
-        o.setEditable(false);
-        o.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        o.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        o.setText("o");
-        getContentPane().add(o, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 500, 60, 40));
+        jTextField1.setEditable(false);
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField1.setText("a");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 60, 40));
 
-        jTextField3.setEditable(false);
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setText("C");
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 60, 40));
+        t.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        t.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        t.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tKeyReleased(evt);
+            }
+        });
+        getContentPane().add(t, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 490, 60, 40));
 
         a.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         a.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -107,28 +113,42 @@ public class Escribir2 extends javax.swing.JFrame {
                 aKeyReleased(evt);
             }
         });
-        getContentPane().add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 500, 60, 40));
+        getContentPane().add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 490, 60, 40));
 
-        r.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        r.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        r.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                rKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                rKeyReleased(evt);
+        M.setEditable(false);
+        M.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        M.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        M.setText("G");
+        M.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MActionPerformed(evt);
             }
         });
-        getContentPane().add(r, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 60, 40));
+        getContentPane().add(M, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 60, 40));
+
+        jTextField5.setEditable(false);
+        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField5.setText("l");
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 60, 40));
+
+        e.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        e.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        e.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                eKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                eKeyReleased(evt);
+            }
+        });
+        getContentPane().add(e, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 490, 60, 40));
 
         i.setEditable(false);
         i.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         i.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        i.setText("r");
-        getContentPane().add(i, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 500, 60, 40));
-
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
-        getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
+        i.setText("l");
+        getContentPane().add(i, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 60, 40));
 
         title.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
         title.setForeground(new java.awt.Color(0, 204, 204));
@@ -141,6 +161,9 @@ public class Escribir2 extends javax.swing.JFrame {
         jLabel3.setText("Completa la palabra.");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 210, -1));
 
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
+        getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
         jLabel2.setText("Instrucciones:");
@@ -149,8 +172,8 @@ public class Escribir2 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/Carro.jpg"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, -1, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Galleta.jpg"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 290, 250));
 
@@ -158,11 +181,8 @@ public class Escribir2 extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 310, 270));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
-
-        menu.setBackground(new java.awt.Color(0, 153, 255));
-        menu.setForeground(new java.awt.Color(255, 255, 255));
 
         jMenu1.setText("Menu");
 
@@ -199,7 +219,7 @@ public class Escribir2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void volver(){
-        new Escribir1().setVisible(true);
+        new Mariposa().setVisible(true);
         dispose();
     }
     
@@ -208,31 +228,36 @@ public class Escribir2 extends javax.swing.JFrame {
     }//GEN-LAST:event_volverActionPerformed
 
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        Escribir3 E3 = new Escribir3();
-        E3.setVisible(true);
+        new Carro().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_siguienteActionPerformed
 
     public void verificar(){
         int marcador = 0;
-        if(a.getText().equalsIgnoreCase("a")) {
+        if(a.getText().equalsIgnoreCase("A")) {
             a.setForeground(Color.GREEN);
             marcador++;
         }
         else a.setForeground(Color.RED);
-        if(r.getText().equalsIgnoreCase("r")){
-            r.setForeground(Color.GREEN);
+        if(e.getText().equalsIgnoreCase("E")){
+            e.setForeground(Color.GREEN);
             marcador++;
         }
-        else r.setForeground(Color.RED);
-        if(marcador == 2)expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
+        else e.setForeground(Color.RED);
+        if(t.getText().equalsIgnoreCase("T")) {
+            t.setForeground(Color.GREEN);
+            marcador++;
+        }
+        else t.setForeground(Color.RED);
+        if(marcador == 3)expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
         else expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
     }
     
     public void reiniciar(){
         a.setForeground(Color.BLACK);
-        r.setForeground(Color.BLACK);
-        if( !("".equals(a.getText())) && !("".equals(r.getText()))){
+        e.setForeground(Color.BLACK);
+        t.setForeground(Color.BLACK);
+        if(!(a.getText().equals("")) && !(e.getText().equals("")) && !(t.getText().equals(""))){
             verificar();
         }
     }
@@ -248,47 +273,77 @@ public class Escribir2 extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_SalirActionPerformed
 
+    private void MActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MActionPerformed
+
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        new Escribir1().setVisible(true);
+        new Mariposa().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void aKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_aKeyPressed
         // TODO add your handling code here:
-        if( !( "a".equalsIgnoreCase(a.getText()) && evt.getKeyChar()=='r' ) ){
+        if( !( "a".equals(a.getText()) && evt.getKeyChar()=='e' ) ){
             a.setText("");
         } else {
             back=true;
         }
     }//GEN-LAST:event_aKeyPressed
 
+    private void eKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_eKeyPressed
+        // TODO add your handling code here:
+        if( !( "e".equalsIgnoreCase(e.getText()) && evt.getKeyChar()=='t' ) ) {
+            e.setText("");
+        } else {
+            back=true;
+        }
+    }//GEN-LAST:event_eKeyPressed
+
+    private void tKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tKeyPressed
+        // TODO add your handling code here:
+        t.setText("");
+    }//GEN-LAST:event_tKeyPressed
+
     private void aKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_aKeyReleased
         // TODO add your handling code here:
         if( evt.getKeyChar() == 'a'){
-            r.requestFocus();
+            e.requestFocus();
         }
-        if( back ){
+        if(back){
             a.setText("a");
-            r.setText("r");
-            r.requestFocus();
+            e.setText("e");
+            t.requestFocus();
             back=false;
         }
         reiniciar();
     }//GEN-LAST:event_aKeyReleased
 
-    private void rKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rKeyPressed
+    private void eKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_eKeyReleased
         // TODO add your handling code here:
-        r.setText("");
-    }//GEN-LAST:event_rKeyPressed
-
-    private void rKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rKeyReleased
-        // TODO add your handling code here:
-        if( evt.getKeyChar()==8 ){
+        if( evt.getKeyChar() == 'e'){
+            t.requestFocus();
+        }
+        if( "".equals(e.getText()) ){
             a.requestFocus();
         }
+        if( back ){
+            e.setText("e");
+            t.setText("t");
+            t.requestFocus();
+            back=false;
+        }
         reiniciar();
-    }//GEN-LAST:event_rKeyReleased
+    }//GEN-LAST:event_eKeyReleased
+
+    private void tKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tKeyReleased
+        // TODO add your handling code here:
+        if( "".equals(t.getText())){
+            e.requestFocus();
+        }
+        reiniciar();
+    }//GEN-LAST:event_tKeyReleased
 
     /**
      * @param args the command line arguments
@@ -307,30 +362,34 @@ public class Escribir2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Escribir2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Galleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Escribir2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Galleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Escribir2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Galleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Escribir2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Galleta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Escribir2().setVisible(true);
+                new Galleta().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField M;
     private javax.swing.JMenuItem MenuPrincipal;
     private javax.swing.JMenuItem Salir;
     private javax.swing.JTextField a;
     private javax.swing.JLabel background;
+    private javax.swing.JTextField e;
     private javax.swing.JLabel expresion;
     private javax.swing.JTextField i;
     private javax.swing.JLabel jLabel2;
@@ -341,11 +400,11 @@ public class Escribir2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JMenuBar menu;
-    private javax.swing.JTextField o;
-    private javax.swing.JTextField r;
     private javax.swing.JButton siguiente;
+    private javax.swing.JTextField t;
     private javax.swing.JLabel title;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables

@@ -3,44 +3,48 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.grades.first;
+package code.grades.first.spanish.Write;
 
 import code.main.Home;
 import java.awt.Color;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.net.URL;
 import javax.swing.Icon;
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
+import javax.swing.JLabel;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.JLabel;
-import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
-
-
-//import javazoom.jl.decoder.JavaLayerException;
-//import javazoom.jl.player.Player;
-
 
 
 /**
  *
  * @author admin
  */
-public class Escribir extends javax.swing.JFrame {
+public class Mariposa extends javax.swing.JFrame {
 
     /**
-     * Creates new form Escribir
+     * Creates new form Mariposa
      */
     boolean back=false;
-    public Escribir() {
+    public Mariposa() {
         initComponents();
         this.setLocationRelativeTo(null);
+        //traducir();
     }
 
+    /*void traducir(){
+        if(Language.language.equals("Español")) return;
+        
+        javax.swing.JLabel[] texts = {jLabel1,jLabel2,jLabel3};
+        String[] traduc = {
+            "Writing",
+            "Instructions",
+            "Complete the word."
+        };
+        Language.traducir(texts,traduc);
+        
+        javax.swing.JButton[] botons = {volver,verificar,siguiente};
+        traduc = new String[]{"Back","Verify","Next"};
+        Language.traducir(botons,traduc);
+    }*/
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,7 +57,7 @@ public class Escribir extends javax.swing.JFrame {
 
         inslabel = new javax.swing.JLabel();
         instr = new javax.swing.JLabel();
-        title = new javax.swing.JLabel();
+        maripsa = new javax.swing.JLabel();
         expresion = new javax.swing.JLabel();
         siguiente = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
@@ -67,7 +71,7 @@ public class Escribir extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        maripsa = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -90,11 +94,10 @@ public class Escribir extends javax.swing.JFrame {
         instr.setText("Completa la palabra.");
         getContentPane().add(instr, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 210, -1));
 
-        title.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
-        title.setForeground(new java.awt.Color(0, 204, 204));
-        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title.setText("Escribamos!");
-        getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
+        maripsa.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
+        maripsa.setForeground(new java.awt.Color(0, 204, 204));
+        maripsa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(maripsa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 840, 60));
 
         expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
@@ -103,6 +106,7 @@ public class Escribir extends javax.swing.JFrame {
         siguiente.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         siguiente.setForeground(new java.awt.Color(0, 102, 102));
         siguiente.setText(">");
+        siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         siguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 siguienteActionPerformed(evt);
@@ -201,7 +205,7 @@ public class Escribir extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/Mariposa pintada jajaja.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Mariposa pintada jajaja.png"))); // NOI18N
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -216,12 +220,13 @@ public class Escribir extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 310, 270));
 
-        maripsa.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
-        maripsa.setForeground(new java.awt.Color(0, 204, 204));
-        maripsa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(maripsa, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 840, 60));
+        title.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
+        title.setForeground(new java.awt.Color(0, 204, 204));
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("Escribamos!");
+        getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -265,8 +270,7 @@ public class Escribir extends javax.swing.JFrame {
     }
     
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        Escribir1 E1 = new Escribir1();
-        E1.setVisible(true);
+        new Galleta().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_siguienteActionPerformed
     Icon icono;
@@ -340,9 +344,6 @@ public class Escribir extends javax.swing.JFrame {
         } else {
             back=true;
         }
-        maripsa.setText("");
-        inslabel.setText("Instrucciones:");
-        instr.setText("Completa la palabra.");
     }//GEN-LAST:event_MKeyPressed
 
     private void iKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_iKeyPressed
@@ -352,6 +353,9 @@ public class Escribir extends javax.swing.JFrame {
         } else {
             back=true;
         }
+        maripsa.setText("");
+        inslabel.setText("Instrucciones:");
+        instr.setText("Completa la palabra.");
     }//GEN-LAST:event_iKeyPressed
 
     private void MKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MKeyReleased
@@ -400,16 +404,13 @@ public class Escribir extends javax.swing.JFrame {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-       try{
+        try{
                 inslabel.setText("");
                 instr.setText("");
                 maripsa.setForeground(Color.GREEN);
                 maripsa.setText("Mariposa");
                 sonido("mariposa");
             }catch(Exception e){}
-                /*maripsa.setText("");
-                inslabel.setText("Instrucciones:");
-                instr.setText("Completa la palabra.");*/
     }//GEN-LAST:event_jLabel8MouseClicked
 
     public void sonido(String txt){
@@ -420,6 +421,7 @@ public class Escribir extends javax.swing.JFrame {
                 Thread.sleep(100);
         }catch(Exception e){}
     }
+    
     /**
      * @param args the command line arguments
      */
@@ -437,13 +439,13 @@ public class Escribir extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Escribir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mariposa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Escribir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mariposa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Escribir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mariposa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Escribir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mariposa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -451,7 +453,7 @@ public class Escribir extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Escribir().setVisible(true);
+                new Mariposa().setVisible(true);
             }
         });
     }

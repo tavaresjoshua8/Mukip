@@ -45,7 +45,7 @@ public class Home extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        tutorial = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -123,47 +123,47 @@ public class Home extends javax.swing.JFrame {
         jLabel4.setText("PROGRAMA EDUCATIVO");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/locked.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 50, 40));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/locked.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, 50, 40));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/locked.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, 50, 40));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/locked.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 50, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/locked.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 50, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/tutorial.gif"))); // NOI18N
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        tutorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/tutorial.gif"))); // NOI18N
+        tutorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tutorial.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                tutorialMouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, -1));
+        getContentPane().add(tutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, -1));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resouces/main/backgrounds/home.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/backgrounds/home.png"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1220, 660));
 
         setSize(new java.awt.Dimension(930, 659));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void tutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialMouseClicked
         // TODO add your handling code here:
         new Tutorial().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabel2MouseClicked
+    }//GEN-LAST:event_tutorialMouseClicked
 /**/
     public void sonido(String txt){
         try{
             Clip sonido = AudioSystem.getClip();
-		sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resouces/main/" + txt + ".wav")));
+		sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resources/main/" + txt + ".wav")));
                 sonido.start();
                 Thread.sleep(100);
         }catch(Exception e){}
@@ -213,7 +213,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -221,5 +220,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel text;
+    private javax.swing.JLabel tutorial;
     // End of variables declaration//GEN-END:variables
 }

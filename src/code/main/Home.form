@@ -248,7 +248,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resouces/main/locked.png"/>
+          <Image iconType="3" name="/resources/main/locked.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -260,7 +260,7 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resouces/main/locked.png"/>
+          <Image iconType="3" name="/resources/main/locked.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -272,7 +272,7 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resouces/main/locked.png"/>
+          <Image iconType="3" name="/resources/main/locked.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -284,7 +284,7 @@
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resouces/main/locked.png"/>
+          <Image iconType="3" name="/resources/main/locked.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -296,7 +296,7 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resouces/main/locked.png"/>
+          <Image iconType="3" name="/resources/main/locked.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -305,17 +305,17 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="tutorial">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resouces/main/tutorial.gif"/>
+          <Image iconType="3" name="/resources/main/tutorial.gif"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel2MouseClicked"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tutorialMouseClicked"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -326,7 +326,7 @@
     <Component class="javax.swing.JLabel" name="fondo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resouces/main/backgrounds/home.png"/>
+          <Image iconType="3" name="/resources/main/backgrounds/home.png"/>
         </Property>
       </Properties>
       <Constraints>

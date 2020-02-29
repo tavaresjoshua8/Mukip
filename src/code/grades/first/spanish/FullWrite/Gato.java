@@ -3,25 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.grades.first;
+package code.grades.first.spanish.FullWrite;
 
 
+import code.grades.first.spanish.DragAndDrop.NameToImage;
 import code.main.Home;
 import java.awt.Color;
+
 
 /**
  *
  * @author admin
  */
-public class Escribir7 extends javax.swing.JFrame {
+public class Gato extends javax.swing.JFrame {
 
     boolean back=false;
     /**
-     * Creates new form Escribir8
+     * Creates new form Gato
      */
-    public Escribir7() {
+    public Gato() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
+        g.requestFocus();
+
     }
     
 
@@ -36,17 +40,16 @@ public class Escribir7 extends javax.swing.JFrame {
 
         volver = new javax.swing.JButton();
         siguiente = new javax.swing.JButton();
+        o = new javax.swing.JTextField();
+        g = new javax.swing.JTextField();
         a = new javax.swing.JTextField();
-        s = new javax.swing.JTextField();
-        i = new javax.swing.JTextField();
-        l = new javax.swing.JTextField();
-        L = new javax.swing.JTextField();
+        t = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         expresion = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
@@ -70,7 +73,7 @@ public class Escribir7 extends javax.swing.JFrame {
                 volverActionPerformed(evt);
             }
         });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 580, 170, 40));
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 580, 180, 40));
 
         siguiente.setBackground(new java.awt.Color(255, 255, 255));
         siguiente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -81,7 +84,29 @@ public class Escribir7 extends javax.swing.JFrame {
                 siguienteActionPerformed(evt);
             }
         });
-        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 580, 170, 40));
+        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 580, 180, 40));
+
+        o.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        o.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                oKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                oKeyReleased(evt);
+            }
+        });
+        getContentPane().add(o, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 490, 70, 40));
+
+        g.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        g.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                gKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                gKeyReleased(evt);
+            }
+        });
+        getContentPane().add(g, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 70, 40));
 
         a.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -92,57 +117,24 @@ public class Escribir7 extends javax.swing.JFrame {
                 aKeyReleased(evt);
             }
         });
-        getContentPane().add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 70, 40));
+        getContentPane().add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, 70, 40));
 
-        s.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        s.addKeyListener(new java.awt.event.KeyAdapter() {
+        t.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        t.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                sKeyPressed(evt);
+                tKeyPressed(evt);
             }
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                sKeyReleased(evt);
+                tKeyReleased(evt);
             }
         });
-        getContentPane().add(s, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 70, 40));
-
-        i.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        i.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                iKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                iKeyReleased(evt);
-            }
-        });
-        getContentPane().add(i, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 490, 70, 40));
-
-        l.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        l.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                lKeyReleased(evt);
-            }
-        });
-        getContentPane().add(l, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 70, 40));
-
-        L.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        L.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                LKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                LKeyReleased(evt);
-            }
-        });
-        getContentPane().add(L, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 70, 40));
+        getContentPane().add(t, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 70, 40));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/Silla.jpg"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Gatito.jpg"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 290, 250));
 
@@ -153,15 +145,15 @@ public class Escribir7 extends javax.swing.JFrame {
         expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel3.setText("Escribe el nombre de la imagen.");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 270, -1));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel6.setText("Escribe el nombre de la imagen.");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 270, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("Instrucciones:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 140, -1));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel7.setText("Instrucciones:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 140, -1));
 
         title.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
         title.setForeground(new java.awt.Color(0, 204, 204));
@@ -169,7 +161,7 @@ public class Escribir7 extends javax.swing.JFrame {
         title.setText("Escribamos!");
         getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/escribir/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -206,9 +198,9 @@ public class Escribir7 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void volver(){
-        new Escribir6().setVisible(true);
-        this.dispose();
+    public void volver() {
+        new NameToImage().setVisible(true);
+        dispose();
     }
     
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
@@ -216,42 +208,43 @@ public class Escribir7 extends javax.swing.JFrame {
     }//GEN-LAST:event_volverActionPerformed
 
     public void verificar(){
-        String q = s.getText();
-        String w = i.getText();
-        String r = l.getText();
-        String t = L.getText();
-        String y = a.getText();
-        String silla = q + w + r + t + y;
-        if(silla.equalsIgnoreCase("Silla")){
-            s.setForeground(Color.GREEN);
-            i.setForeground(Color.GREEN);
-            l.setForeground(Color.GREEN);
-            L.setForeground(Color.GREEN);
+        String q = g.getText();
+        String w = a.getText();
+        String e = t.getText();
+        String r = o.getText();
+        String gato = q + w + e + r;
+        if(gato.equalsIgnoreCase("Gato")){
+            g.setForeground(Color.GREEN);
             a.setForeground(Color.GREEN);
+            t.setForeground(Color.GREEN);
+            o.setForeground(Color.GREEN);
             expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
-        }
+        } 
         else{
-            s.setForeground(Color.RED);
-            i.setForeground(Color.RED);
-            l.setForeground(Color.RED);
-            L.setForeground(Color.RED);
+            g.setForeground(Color.RED);
             a.setForeground(Color.RED);
+            t.setForeground(Color.RED);
+            o.setForeground(Color.RED);
             expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
-        }
+        } 
     }
-    
+
     public void reiniciar(){
         expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG")));
-        s.setForeground(Color.BLACK);
-        i.setForeground(Color.BLACK);
-        l.setForeground(Color.BLACK);
-        L.setForeground(Color.BLACK);
+        g.setForeground(Color.BLACK);
         a.setForeground(Color.BLACK);
-        if( !("".equals(s.getText()))  &&  !("".equals(i.getText()))  && !("".equals(l.getText())) &&  !("".equals(L.getText()))  &&  !("".equals(a.getText()))){
+        t.setForeground(Color.BLACK);
+        o.setForeground(Color.BLACK);
+        if( !("".equals(g.getText())) && !("".equals(a.getText())) && !("".equals(t.getText())) && !("".equals(o.getText()))){
             verificar();
         }
     }
     
+    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
+        new Silla().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_siguienteActionPerformed
+
     private void MenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuPrincipalActionPerformed
         // TODO add your handling code here:
         new Home().setVisible(true);
@@ -265,128 +258,100 @@ public class Escribir7 extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        new Escribir7().setVisible(true);
+        new NameToImage().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void sKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sKeyPressed
+    private void gKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_gKeyPressed
         // TODO add your handling code here:
-        if( !( "s".equalsIgnoreCase(s.getText()) && evt.getKeyChar()=='i' ) ){
-           s.setText(""); 
+        if( !( "G".equalsIgnoreCase(g.getText()) && evt.getKeyChar()=='a' ) ){
+            g.setText("");
         } else {
             back=true;
         }
-    }//GEN-LAST:event_sKeyPressed
-
-    private void iKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_iKeyPressed
-        // TODO add your handling code here:
-        if( !( "i".equalsIgnoreCase(i.getText()) && evt.getKeyChar()=='l' ) ){
-            i.setText("");
-        } else {
-            back=true;
+        if( evt.getKeyChar() == 'G') {
+            a.requestFocus();
         }
-    }//GEN-LAST:event_iKeyPressed
-
-    private void lKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lKeyPressed
-        // TODO add your handling code here:
-        if( !( "l".equalsIgnoreCase(l.getText()) && evt.getKeyChar()=='l' ) ){
-            l.setText("");
-        } else {
-            back=true;
-        }
-    }//GEN-LAST:event_lKeyPressed
-
-    private void LKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LKeyPressed
-        // TODO add your handling code here:
-        if( !( "l".equalsIgnoreCase(L.getText()) && evt.getKeyChar()=='a' ) ){
-            L.setText("");
-        } else {
-            back=true;
-        }
-    }//GEN-LAST:event_LKeyPressed
-
-    private void sKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sKeyReleased
-        // TODO add your handling code here:
-        if( evt.getKeyChar() == 'S' || evt.getKeyChar()=='s'){
-            i.requestFocus();
-        }
-        if( back ){
-            s.setText("S");
-            i.setText("i");
-            l.requestFocus();
-            back=false;
-        }
-        reiniciar();
-    }//GEN-LAST:event_sKeyReleased
+    }//GEN-LAST:event_gKeyPressed
 
     private void aKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_aKeyPressed
         // TODO add your handling code here:
-        a.setText("");
+        if( !( "a".equalsIgnoreCase(a.getText()) && evt.getKeyChar()=='t' ) ){
+            a.setText("");
+        } else {
+            back=true;
+        }
     }//GEN-LAST:event_aKeyPressed
 
-    private void iKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_iKeyReleased
+    private void tKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tKeyPressed
         // TODO add your handling code here:
-        if( evt.getKeyChar() == 'i'){
-            l.requestFocus();
+        if( !( "t".equalsIgnoreCase(t.getText()) && evt.getKeyChar()=='o' ) ){
+            t.setText("");
+        } else {
+            back=true;
         }
-        if( evt.getKeyChar()==8){
-            s.requestFocus();
-        }
-        if( back ){
-            i.setText("i");
-            l.setText("l");
-            L.requestFocus();
-            back=false;
-        }
-        reiniciar();
-    }//GEN-LAST:event_iKeyReleased
+    }//GEN-LAST:event_tKeyPressed
 
-    private void lKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lKeyReleased
+    private void gKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_gKeyReleased
         // TODO add your handling code here:
-        if (evt.getKeyChar() == 'l'){
-            L.requestFocus();
-        }
-        if( evt.getKeyChar()==8){
-            i.requestFocus();
+        if( evt.getKeyChar() == 'G' || evt.getKeyChar()=='g'){
+            a.requestFocus();
         }
         if( back ){
-            l.setText("l");
-            L.setText("l");
-            a.requestFocus();
+            g.setText("G");
+            a.setText("a");
+            t.requestFocus();
             back=false;
         }
         reiniciar();
-    }//GEN-LAST:event_lKeyReleased
+    }//GEN-LAST:event_gKeyReleased
+
+    private void oKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_oKeyPressed
+        // TODO add your handling code here:
+        o.setText("");
+    }//GEN-LAST:event_oKeyPressed
 
     private void aKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_aKeyReleased
         // TODO add your handling code here:
-        if( evt.getKeyChar()==8){
-            L.requestFocus();
+        if( evt.getKeyChar() == 'a'){
+            t.requestFocus();
+        }
+        if( evt.getKeyChar()==8 ){
+            g.requestFocus();
+        }
+        if( back ){
+            a.setText("a");
+            t.setText("t");
+            o.requestFocus();
+            back=false;
         }
         reiniciar();
     }//GEN-LAST:event_aKeyReleased
 
-    private void LKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LKeyReleased
+    private void tKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tKeyReleased
         // TODO add your handling code here:
-        if( evt.getKeyChar() == 'l'){
-            a.requestFocus();
+        if( evt.getKeyChar()=='t' ){
+            o.requestFocus();
         }
-        if( evt.getKeyChar()==8){
-            l.requestFocus();
+        if( evt.getKeyChar()==8 ){
+            a.requestFocus();
         }
         if( back ){
-            L.setText("l");
-            a.setText("a");
-            a.requestFocus();
+            t.setText("t");
+            o.setText("o");
+            o.requestFocus();
             back=false;
         }
         reiniciar();
-    }//GEN-LAST:event_LKeyReleased
+    }//GEN-LAST:event_tKeyReleased
 
-    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        new Escribir8().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_siguienteActionPerformed
+    private void oKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_oKeyReleased
+        // TODO add your handling code here:
+        if( evt.getKeyChar()==8 ){
+            t.requestFocus();
+        }
+        reiniciar();
+    }//GEN-LAST:event_oKeyReleased
 
     /**
      * @param args the command line arguments
@@ -405,44 +370,44 @@ public class Escribir7 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Escribir8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Escribir8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Escribir8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Escribir8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Escribir8().setVisible(true);
+                new Gato().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField L;
     private javax.swing.JMenuItem MenuPrincipal;
     private javax.swing.JMenuItem Salir;
     private javax.swing.JTextField a;
     private javax.swing.JLabel background;
     private javax.swing.JLabel expresion;
-    private javax.swing.JTextField i;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField g;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JTextField l;
     private javax.swing.JMenuBar menu;
-    private javax.swing.JTextField s;
+    private javax.swing.JTextField o;
     private javax.swing.JButton siguiente;
+    private javax.swing.JTextField t;
     private javax.swing.JLabel title;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
