@@ -23,16 +23,16 @@ public class Loading extends javax.swing.JFrame {
     
    private void preparePhrases(){
        String[] phrases = {
-           "Consejo de Prueba 1",
-           "Consejo de Prueba 2",
-           "Consejo de Prueba 3",
-           "Consejo de Prueba 4",
-           "Consejo de Prueba 5",
-           "Consejo de Prueba 6",
-           "Consejo de Prueba 7",
-           "Consejo de Prueba 8",
-           "Consejo de Prueba 9",
-           "Consejo de Prueba 10"
+           "quien le pone consejo de prueba 1 a esta cosa?",
+           "Haz clic en el Mukip de la pantalla de inicio para abrir el tutorial",
+           "Hail Hitler",
+           "Enserio estás leyendo esto?",
+           "Mainkraaaaaa",
+           "Solo eres su amigo :)",
+           "Ella no te ama",
+           "Es una gallina o un pato?",
+           "Santa claus no existe",
+           "este ni se va a ver"
        };
        
        int selectedPhrase = (int) Math.round( Math.random() * (phrases.length + 1) ) - 1;
@@ -124,7 +124,7 @@ public class Loading extends javax.swing.JFrame {
         
         try{
             for(int i = 0; i <=100; i++){
-                Thread.sleep(80);
+                Thread.sleep(50);
                 load.progressBar.setValue(i);
             }
         }catch(Exception E){}
