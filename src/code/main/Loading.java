@@ -9,7 +9,7 @@ import code.main.Home;
 
 /**
  *
- * @author hp
+ * @author tavar
  */
 public class Loading extends javax.swing.JFrame {
 
@@ -68,7 +68,7 @@ public class Loading extends javax.swing.JFrame {
         phrase.setText("phrase");
         jPanel1.add(phrase, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 240, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/backgrounds/loading.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/loading.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 300, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

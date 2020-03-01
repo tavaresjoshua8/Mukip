@@ -10,7 +10,7 @@ import javax.sound.sampled.Clip;
 
 /**
  *
- * @author hp
+ * @author tavar
  */
 public class Home extends javax.swing.JFrame {
 
@@ -123,22 +123,22 @@ public class Home extends javax.swing.JFrame {
         jLabel4.setText("PROGRAMA EDUCATIVO");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 130, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 50, 40));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, 50, 40));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, 50, 40));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 50, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/locked.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/locked.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 50, 40));
 
-        tutorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/tutorial.gif"))); // NOI18N
+        tutorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/tutorial.gif"))); // NOI18N
         tutorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tutorial.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -147,7 +147,7 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(tutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, -1));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/main/backgrounds/home.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/home.png"))); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1220, 660));
 
         setSize(new java.awt.Dimension(930, 659));
@@ -163,10 +163,12 @@ public class Home extends javax.swing.JFrame {
     public void sonido(String txt){
         try{
             Clip sonido = AudioSystem.getClip();
-		sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resources/main/" + txt + ".wav")));
-                sonido.start();
-                Thread.sleep(100);
-        }catch(Exception e){}
+            sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resources/sounds/main/" + txt + ".wav")));
+            sonido.start();
+            Thread.sleep(100);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
     /**
      * @param args the command line arguments

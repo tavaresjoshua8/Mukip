@@ -86,7 +86,7 @@ public class Conejo extends javax.swing.JFrame {
         });
         getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 590, 180, 40));
 
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
 
         title.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
@@ -108,7 +108,7 @@ public class Conejo extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Conejo.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Conejo.jpg"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 290, 250));
@@ -163,7 +163,7 @@ public class Conejo extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 590, 80));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -214,19 +214,19 @@ public class Conejo extends javax.swing.JFrame {
             n.setForeground(Color.RED);
             b.setForeground(Color.BLACK);
             m.setForeground(Color.BLACK);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
+            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/triste.gif")));
         }
         if(c2.isSelected()){
             b.setForeground(Color.RED);
             n.setForeground(Color.BLACK);
             m.setForeground(Color.BLACK);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
+            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/triste.gif")));
         }
         if(c3.isSelected()){
             m.setForeground(Color.GREEN);
             n.setForeground(Color.BLACK);
             b.setForeground(Color.BLACK);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
+            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/correcto.gif")));
         }
     }
     

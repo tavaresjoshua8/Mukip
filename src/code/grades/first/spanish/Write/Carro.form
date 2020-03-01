@@ -201,7 +201,7 @@
     <Component class="javax.swing.JLabel" name="expresion">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/expresiones/expresion1.PNG"/>
+          <Image iconType="3" name="/resources/images/expressions/expresion1.PNG"/>
         </Property>
       </Properties>
       <Constraints>
@@ -278,7 +278,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/resources/grades/first/spanish/Carro.jpg"/>
+              <Image iconType="3" name="/resources/images/grades/first/spanish/Carro.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -308,7 +308,7 @@
     <Component class="javax.swing.JLabel" name="background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/grades/first/spanish/backgrounds/paisaje4.jpg"/>
+          <Image iconType="3" name="/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"/>
         </Property>
       </Properties>
       <Constraints>

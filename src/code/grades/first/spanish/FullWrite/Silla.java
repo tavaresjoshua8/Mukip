@@ -142,7 +142,7 @@ public class Silla extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Silla.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Silla.jpg"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 290, 250));
@@ -151,7 +151,7 @@ public class Silla extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 310, 270));
 
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -170,7 +170,7 @@ public class Silla extends javax.swing.JFrame {
         title.setText("Escribamos!");
         getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -229,7 +229,7 @@ public class Silla extends javax.swing.JFrame {
             l.setForeground(Color.GREEN);
             L.setForeground(Color.GREEN);
             a.setForeground(Color.GREEN);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
+            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/correcto.gif")));
         }
         else{
             s.setForeground(Color.RED);
@@ -237,12 +237,12 @@ public class Silla extends javax.swing.JFrame {
             l.setForeground(Color.RED);
             L.setForeground(Color.RED);
             a.setForeground(Color.RED);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
+            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/triste.gif")));
         }
     }
     
     public void reiniciar(){
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG")));
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG")));
         s.setForeground(Color.BLACK);
         i.setForeground(Color.BLACK);
         l.setForeground(Color.BLACK);

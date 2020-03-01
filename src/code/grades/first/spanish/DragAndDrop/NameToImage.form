@@ -257,7 +257,7 @@
     <Component class="javax.swing.JLabel" name="expresion">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/expresiones/expresion1.PNG"/>
+          <Image iconType="3" name="/resources/images/expressions/expresion1.PNG"/>
         </Property>
       </Properties>
       <Constraints>
@@ -317,7 +317,7 @@
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/resources/grades/first/spanish/Casita.jpg"/>
+              <Image iconType="3" name="/resources/images/grades/first/spanish/Casita.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -363,7 +363,7 @@
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/resources/grades/first/spanish/Tortugus.jpg"/>
+              <Image iconType="3" name="/resources/images/grades/first/spanish/Tortugus.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -409,7 +409,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/resources/grades/first/spanish/Guitarra.jpg"/>
+              <Image iconType="3" name="/resources/images/grades/first/spanish/Guitarra.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -455,7 +455,7 @@
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/resources/grades/first/spanish/Dulces.jpg"/>
+              <Image iconType="3" name="/resources/images/grades/first/spanish/Dulces.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -485,7 +485,7 @@
     <Component class="javax.swing.JLabel" name="background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/grades/first/spanish/backgrounds/paisaje4.jpg"/>
+          <Image iconType="3" name="/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"/>
         </Property>
       </Properties>
       <Constraints>

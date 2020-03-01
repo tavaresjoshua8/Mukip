@@ -161,7 +161,7 @@ public class Galleta extends javax.swing.JFrame {
         jLabel3.setText("Completa la palabra.");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 210, -1));
 
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -172,7 +172,7 @@ public class Galleta extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Galleta.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Galleta.jpg"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 290, 250));
@@ -181,7 +181,7 @@ public class Galleta extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 310, 270));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -249,8 +249,8 @@ public class Galleta extends javax.swing.JFrame {
             marcador++;
         }
         else t.setForeground(Color.RED);
-        if(marcador == 3)expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
-        else expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
+        if(marcador == 3)expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/correcto.gif")));
+        else expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/triste.gif")));
     }
     
     public void reiniciar(){

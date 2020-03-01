@@ -154,7 +154,7 @@ public class NameToImage extends javax.swing.JFrame {
         title.setText("Escribamos!");
         getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
 
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -170,7 +170,7 @@ public class NameToImage extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Casita.jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Casita.jpg"))); // NOI18N
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 380, 200, 200));
@@ -182,7 +182,7 @@ public class NameToImage extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Tortugus.jpg"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Tortugus.jpg"))); // NOI18N
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, 200));
@@ -194,7 +194,7 @@ public class NameToImage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Guitarra.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Guitarra.jpg"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 180, 200));
@@ -206,7 +206,7 @@ public class NameToImage extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Dulces.jpg"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Dulces.jpg"))); // NOI18N
         jPanel8.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
 
         getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 90, 190, 200));
@@ -215,7 +215,7 @@ public class NameToImage extends javax.swing.JFrame {
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 80, 210, 220));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -263,10 +263,10 @@ public class NameToImage extends javax.swing.JFrame {
         for(int i = 0; i<texts.length;i++){
             if(texts[i].getText().equalsIgnoreCase(respuestas[i])){
                 texts[i].setForeground(Color.GREEN);
-                expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
+                expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/correcto.gif")));
             } else {
                 texts[i].setForeground(Color.RED);
-                expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/triste.gif")));
+                expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/triste.gif")));
             }
         }
     }//GEN-LAST:event_verificarActionPerformed
@@ -307,7 +307,7 @@ public class NameToImage extends javax.swing.JFrame {
         casa.setForeground(Color.BLACK);
         dulces.setForeground(Color.BLACK);
         guitarra.setForeground(Color.BLACK);
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG")));
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG")));
     }//GEN-LAST:event_reiniciarActionPerformed
 
     /**

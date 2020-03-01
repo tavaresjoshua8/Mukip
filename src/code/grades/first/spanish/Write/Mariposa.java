@@ -99,7 +99,7 @@ public class Mariposa extends javax.swing.JFrame {
         maripsa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(maripsa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 840, 60));
 
-        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/expresion1.PNG"))); // NOI18N
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
 
         siguiente.setBackground(new java.awt.Color(255, 255, 255));
@@ -205,7 +205,7 @@ public class Mariposa extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/Mariposa pintada jajaja.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Mariposa pintada jajaja.png"))); // NOI18N
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -226,7 +226,7 @@ public class Mariposa extends javax.swing.JFrame {
         title.setText("Escribamos!");
         getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
         jMenu1.setText("Menu");
@@ -277,7 +277,7 @@ public class Mariposa extends javax.swing.JFrame {
     public void verificar() throws InterruptedException{
         if(M.getText().equalsIgnoreCase("M")) {
             M.setForeground(Color.GREEN);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/expresiones/correcto.gif")));
+            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/correcto.gif")));
         } else {
             M.setForeground(Color.RED);
         }
@@ -416,7 +416,7 @@ public class Mariposa extends javax.swing.JFrame {
     public void sonido(String txt){
         try{
             Clip sonido = AudioSystem.getClip();
-		sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resources/audios/primero/" + txt + ".wav")));
+		sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resources/sounds/main/" + txt + ".wav")));
                 sonido.start();
                 Thread.sleep(100);
         }catch(Exception e){}
