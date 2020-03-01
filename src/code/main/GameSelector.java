@@ -7,14 +7,41 @@ package code.main;
 
 import code.grades.first.spanish.Write.Mariposa;
 
-
 /**
  *
  * @author hp
  */
 public class GameSelector extends javax.swing.JFrame {
     
-    public int act = 0;
+    // Game counter
+    private int act = 0;
+    // Games list
+    Activity[] activities = {
+        new Activity("Escritura", "ABC", new Mariposa()),
+        new Activity("Matemáticas", "matematicas", new InWorkFrame()),
+        new Activity("Cuentos", new InWorkFrame()),
+        new Activity("Abecedario", new InWorkFrame()),
+        new Activity("Números", "numeros", new InWorkFrame())
+    };
+    
+    // Game Class (helper)
+    public class Activity {
+        public String name;
+        public String image;
+        public javax.swing.JFrame frame;
+        
+        public Activity(String name, String image, javax.swing.JFrame frame){
+            this.name = name;
+            this.image = image;
+            this.frame = frame;
+        }
+        
+        public Activity(String name, javax.swing.JFrame frame){
+            this.name = name;
+            this.image = name.toLowerCase();
+            this.frame = frame;
+        }
+    }
     /**
      * Creates new form GameSelector
      */
@@ -129,54 +156,32 @@ public class GameSelector extends javax.swing.JFrame {
 
     private void imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagenMouseClicked
         // TODO add your handling code here:
-        String game = activity.getText();
-        switch(game){
-            case "Escritura":
-                new Mariposa().setVisible(true);
-                this.dispose();
-            break;
-            case "Matemáticas":
-                new InWorkFrame().setVisible(true);
-                this.dispose();
-            break;
-            case "Cuentos":
-                new InWorkFrame().setVisible(true);
-                this.dispose();
-            break;
-            case "Abecedario":
-                new InWorkFrame().setVisible(true);
-                this.dispose();
-            break;
-            case "Números":
-                new InWorkFrame().setVisible(true);
-                this.dispose();
-            break;
-        }
+        activities[act].frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_imagenMouseClicked
         
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
         // TODO add your handling code here:
         act++;
-        String[] actividades = {"Escritura","Matemáticas","Cuentos","Abecedario","Números"};
-        String[] icon = {"ABC","matematicas","cuentos","abecedario","numeros"};
-        if(act == 5) act = 0;
-        activity.setText(actividades[act]);
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/" + icon[act] + ".PNG")));
+        if(act > (activities.length-1) ) act = 0;
+        
+        updateActivity();
     }//GEN-LAST:event_rightMouseClicked
 
     private void leftMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leftMouseClicked
         // TODO add your handling code here:
         act--;
-        String[] actividades = {"Escritura","Matemáticas","Cuentos","Abecedario","Números"};
-        String[] icon = {"ABC","matematicas","cuentos","abecedario","numeros"};
-        if(act == -1)act = 5;
-        else{
-            activity.setText(actividades[act]);
-            imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/" + icon[act] + ".PNG")));
-        }
+        if(act < 0) act = activities.length-1;
+        
+        updateActivity();
     }//GEN-LAST:event_leftMouseClicked
 
+    private void updateActivity(){
+        Activity actualActivity = activities[act];
+        
+        activity.setText(actualActivity.name);
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/" + actualActivity.image + ".PNG")));
+    }
     /**
      * @param args the command line arguments
      */
