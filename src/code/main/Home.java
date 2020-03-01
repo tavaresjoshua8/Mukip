@@ -34,12 +34,12 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        forthGrade = new javax.swing.JButton();
+        firstGrade = new javax.swing.JButton();
+        thirdGrade = new javax.swing.JButton();
+        fifthGrade = new javax.swing.JButton();
+        sixthGrade = new javax.swing.JButton();
+        secondGrade = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         text = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -56,60 +56,65 @@ public class Home extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 51, 51));
-        jButton1.setText("CUARTO GRADO");
-        jButton1.setToolTipText("");
-        jButton1.setActionCommand("SEGUNDO GRADO");
-        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 240, 40));
+        forthGrade.setBackground(new java.awt.Color(255, 255, 255));
+        forthGrade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        forthGrade.setForeground(new java.awt.Color(51, 51, 51));
+        forthGrade.setText("CUARTO GRADO");
+        forthGrade.setToolTipText("");
+        forthGrade.setActionCommand("SEGUNDO GRADO");
+        forthGrade.setBorder(new javax.swing.border.MatteBorder(null));
+        forthGrade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(forthGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 240, 40));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(51, 51, 51));
-        jButton2.setText("PRIMER GRADO");
-        jButton2.setToolTipText("");
-        jButton2.setBorder(new javax.swing.border.MatteBorder(null));
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 240, 40));
+        firstGrade.setBackground(new java.awt.Color(255, 255, 255));
+        firstGrade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        firstGrade.setForeground(new java.awt.Color(51, 51, 51));
+        firstGrade.setText("PRIMER GRADO");
+        firstGrade.setToolTipText("");
+        firstGrade.setBorder(new javax.swing.border.MatteBorder(null));
+        firstGrade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        firstGrade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstGradeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(firstGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 240, 40));
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 51, 51));
-        jButton3.setText("TERCER GRADO");
-        jButton3.setToolTipText("");
-        jButton3.setBorder(new javax.swing.border.MatteBorder(null));
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 240, 40));
+        thirdGrade.setBackground(new java.awt.Color(255, 255, 255));
+        thirdGrade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        thirdGrade.setForeground(new java.awt.Color(51, 51, 51));
+        thirdGrade.setText("TERCER GRADO");
+        thirdGrade.setToolTipText("");
+        thirdGrade.setBorder(new javax.swing.border.MatteBorder(null));
+        thirdGrade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(thirdGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 240, 40));
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(51, 51, 51));
-        jButton4.setText("QUINTO GRADO");
-        jButton4.setToolTipText("");
-        jButton4.setBorder(new javax.swing.border.MatteBorder(null));
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 240, 40));
+        fifthGrade.setBackground(new java.awt.Color(255, 255, 255));
+        fifthGrade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        fifthGrade.setForeground(new java.awt.Color(51, 51, 51));
+        fifthGrade.setText("QUINTO GRADO");
+        fifthGrade.setToolTipText("");
+        fifthGrade.setBorder(new javax.swing.border.MatteBorder(null));
+        fifthGrade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(fifthGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 240, 40));
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 51, 51));
-        jButton5.setText("SEXTO GRADO");
-        jButton5.setToolTipText("");
-        jButton5.setBorder(new javax.swing.border.MatteBorder(null));
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 570, 240, 40));
+        sixthGrade.setBackground(new java.awt.Color(255, 255, 255));
+        sixthGrade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        sixthGrade.setForeground(new java.awt.Color(51, 51, 51));
+        sixthGrade.setText("SEXTO GRADO");
+        sixthGrade.setToolTipText("");
+        sixthGrade.setBorder(new javax.swing.border.MatteBorder(null));
+        sixthGrade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(sixthGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 570, 240, 40));
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(51, 51, 51));
-        jButton6.setText("SEGUNDO GRADO");
-        jButton6.setToolTipText("");
-        jButton6.setBorder(new javax.swing.border.MatteBorder(null));
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 240, 40));
+        secondGrade.setBackground(new java.awt.Color(255, 255, 255));
+        secondGrade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        secondGrade.setForeground(new java.awt.Color(51, 51, 51));
+        secondGrade.setText("SEGUNDO GRADO");
+        secondGrade.setToolTipText("");
+        secondGrade.setBorder(new javax.swing.border.MatteBorder(null));
+        secondGrade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(secondGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 240, 40));
 
         jLabel1.setFont(new java.awt.Font("Myriad Hebrew", 1, 70)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -151,7 +156,7 @@ public class Home extends javax.swing.JFrame {
         getContentPane().add(tutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, -1));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/home.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1220, 660));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1210, 660));
 
         setSize(new java.awt.Dimension(930, 659));
         setLocationRelativeTo(null);
@@ -162,6 +167,12 @@ public class Home extends javax.swing.JFrame {
         new Tutorial().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_tutorialMouseClicked
+
+    private void firstGradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstGradeActionPerformed
+        // TODO add your handling code here:
+        new GameSelector().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_firstGradeActionPerformed
 /**/
 
     /**
@@ -221,13 +232,10 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton fifthGrade;
+    private javax.swing.JButton firstGrade;
     private javax.swing.JLabel fondo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton forthGrade;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -235,7 +243,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton secondGrade;
+    private javax.swing.JButton sixthGrade;
     private javax.swing.JLabel text;
+    private javax.swing.JButton thirdGrade;
     private javax.swing.JLabel tutorial;
     // End of variables declaration//GEN-END:variables
 }

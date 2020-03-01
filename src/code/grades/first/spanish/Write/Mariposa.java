@@ -7,11 +7,14 @@ package code.grades.first.spanish.Write;
 
 import code.main.Home;
 import java.awt.Color;
+import java.io.IOException;
 import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.JLabel;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 
 /**
@@ -274,6 +277,21 @@ public class Mariposa extends javax.swing.JFrame {
         expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/" + icon + ".gif")));
     }
     
+    public void playSound(String soundName, String soundExt){
+        try {
+            Clip sound = AudioSystem.getClip();
+            sound.open(
+                    AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
+                            String.format("/resources/sounds/main/%s.%s", soundName, soundExt)
+                    ))
+            );
+            sound.start();
+            Thread.sleep(100);
+        } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
+            System.out.println(e.getMessage());
+        }
+    }
+    
     public void reiniciar(){
         M.setForeground(Color.BLACK);
         i.setForeground(Color.BLACK);
@@ -389,8 +407,10 @@ public class Mariposa extends javax.swing.JFrame {
         instr.setText("");
         maripsa.setForeground(Color.GREEN);
         maripsa.setText("Mariposa");
+        playSound("mariposa","wav");
+        
     }//GEN-LAST:event_jLabel8MouseClicked
-    
+
     /**
      * @param args the command line arguments
      */
