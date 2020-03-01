@@ -5,8 +5,11 @@
  */
 package code.main;
 
+import java.io.IOException;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 /**
  *
@@ -19,7 +22,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
-        sonido("menuSoundtrack");
+        playSound("menuSoundtrack", "wav");
     }
 
     /**
@@ -160,13 +163,24 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_tutorialMouseClicked
 /**/
-    public void sonido(String txt){
-        try{
-            Clip sonido = AudioSystem.getClip();
-            sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resources/sounds/main/" + txt + ".wav")));
-            sonido.start();
+
+    /**
+     *
+     * @param soundName Name of the sound
+     * @param soundExt Extenssion of the sound (wav, mp3)
+     */
+
+    public void playSound(String soundName, String soundExt){
+        try {
+            Clip sound = AudioSystem.getClip();
+            sound.open(
+                    AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
+                            String.format("/resources/sounds/main/%s.%s", soundName, soundExt)
+                    ))
+            );
+            sound.start();
             Thread.sleep(100);
-        }catch(Exception e){
+        } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
             System.out.println(e.getMessage());
         }
     }

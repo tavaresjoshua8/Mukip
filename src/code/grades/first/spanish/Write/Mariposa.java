@@ -27,24 +27,7 @@ public class Mariposa extends javax.swing.JFrame {
     public Mariposa() {
         initComponents();
         this.setLocationRelativeTo(null);
-        //traducir();
     }
-
-    /*void traducir(){
-        if(Language.language.equals("Español")) return;
-        
-        javax.swing.JLabel[] texts = {jLabel1,jLabel2,jLabel3};
-        String[] traduc = {
-            "Writing",
-            "Instructions",
-            "Complete the word."
-        };
-        Language.traducir(texts,traduc);
-        
-        javax.swing.JButton[] botons = {volver,verificar,siguiente};
-        traduc = new String[]{"Back","Verify","Next"};
-        Language.traducir(botons,traduc);
-    }*/
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -275,22 +258,20 @@ public class Mariposa extends javax.swing.JFrame {
     }//GEN-LAST:event_siguienteActionPerformed
     Icon icono;
     public void verificar() throws InterruptedException{
-        if(M.getText().equalsIgnoreCase("M")) {
-            M.setForeground(Color.GREEN);
-            expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/correcto.gif")));
-        } else {
-            M.setForeground(Color.RED);
+        javax.swing.JTextField[] campos = {M, i, o};
+        String[] respuestas = {"M", "I", "O"};
+        String icon = "correcto";
+        
+        for(int i=0; i<campos.length; i++){
+            Color color = Color.GREEN;
+            if( !( campos[i].getText().equalsIgnoreCase(respuestas[i]) ) ) {
+                color = Color.RED;
+                icon = "triste";
+            }
+            campos[i].setForeground(color);
         }
-        if(i.getText().equalsIgnoreCase("I")) {
-            i.setForeground(Color.GREEN);
-        } else {
-            i.setForeground(Color.RED);
-        }
-        if(o.getText().equalsIgnoreCase("O")) {
-            o.setForeground(Color.GREEN);
-        } else {
-            o.setForeground(Color.RED);
-        }
+        
+        expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/" + icon + ".gif")));
     }
     
     public void reiniciar(){
@@ -404,23 +385,11 @@ public class Mariposa extends javax.swing.JFrame {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        try{
-                inslabel.setText("");
-                instr.setText("");
-                maripsa.setForeground(Color.GREEN);
-                maripsa.setText("Mariposa");
-                sonido("mariposa");
-            }catch(Exception e){}
+        inslabel.setText("");
+        instr.setText("");
+        maripsa.setForeground(Color.GREEN);
+        maripsa.setText("Mariposa");
     }//GEN-LAST:event_jLabel8MouseClicked
-
-    public void sonido(String txt){
-        try{
-            Clip sonido = AudioSystem.getClip();
-		sonido.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream("/resources/sounds/main/" + txt + ".wav")));
-                sonido.start();
-                Thread.sleep(100);
-        }catch(Exception e){}
-    }
     
     /**
      * @param args the command line arguments
