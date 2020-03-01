@@ -5,6 +5,7 @@
  */
 package code.main;
 
+import code.grades.first.GameSelector;
 import java.io.IOException;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;

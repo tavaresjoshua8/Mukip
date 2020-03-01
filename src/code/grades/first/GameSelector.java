@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.main;
+package code.grades.first;
 
+import code.main.InWorkFrame;
 import code.grades.first.spanish.Write.Mariposa;
+import code.main.Home;
 
 /**
  *
