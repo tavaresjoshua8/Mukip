@@ -7,6 +7,7 @@ package code.grades.first.spanish.Write;
 
 import code.grades.first.spanish.Options.Zapato;
 import code.main.Home;
+import code.util.HistorialController;
 import java.awt.Color;
 
 /**
@@ -199,8 +200,7 @@ public class Carro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void volver(){
-        new Galleta().setVisible(true);
-        dispose();
+        HistorialController.back();
     }
     
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
@@ -208,8 +208,7 @@ public class Carro extends javax.swing.JFrame {
     }//GEN-LAST:event_volverActionPerformed
 
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        new Zapato().setVisible(true);
-        this.dispose();
+        HistorialController.next( new Zapato() );
     }//GEN-LAST:event_siguienteActionPerformed
 
     public void verificar(){
@@ -238,8 +237,7 @@ public class Carro extends javax.swing.JFrame {
     
     private void MenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuPrincipalActionPerformed
         // TODO add your handling code here:
-        new Home().setVisible(true);
-        this.dispose();
+        HistorialController.nextMain();
     }//GEN-LAST:event_MenuPrincipalActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
@@ -249,8 +247,7 @@ public class Carro extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        new Galleta().setVisible(true);
-        this.dispose();
+        volver();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void aKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_aKeyPressed

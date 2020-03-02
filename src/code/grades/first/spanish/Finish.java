@@ -5,6 +5,8 @@
  */
 package code.grades.first.spanish;
 
+import code.util.HistorialController;
+
 /**
  *
  * @author tavar
@@ -32,7 +34,7 @@ public class Finish extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Mukip = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -70,8 +72,13 @@ public class Finish extends javax.swing.JFrame {
         jLabel6.setText("Por qué no dar un vistazo a los demás juegos");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 840, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/correr.gif"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 550, 270));
+        Mukip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/correr.gif"))); // NOI18N
+        Mukip.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MukipMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Mukip, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 550, 270));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, -1));
@@ -79,6 +86,11 @@ public class Finish extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(948, 638));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MukipMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MukipMouseClicked
+        // TODO add your handling code here:
+        HistorialController.nextMain();
+    }//GEN-LAST:event_MukipMouseClicked
 
     /**
      * @param args the command line arguments
@@ -119,7 +131,7 @@ public class Finish extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel Mukip;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

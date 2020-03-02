@@ -7,7 +7,7 @@ package code.grades.first;
 
 import code.main.InWorkFrame;
 import code.grades.first.spanish.Write.Mariposa;
-import code.main.Home;
+import code.util.HistorialController;
 import javax.sound.sampled.Clip;
 
 /**
@@ -142,7 +142,7 @@ public class GameSelector extends javax.swing.JFrame {
                 imagenMouseClicked(evt);
             }
         });
-        jPanel1.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel1.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 320));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 330, 320));
 
@@ -159,15 +159,14 @@ public class GameSelector extends javax.swing.JFrame {
 
     private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
         // TODO add your handling code here:
-        new Home().setVisible(true);
-        this.dispose();
+        HistorialController.back();
     }//GEN-LAST:event_backMouseClicked
 
     private void imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagenMouseClicked
         // TODO add your handling code here:
         sound.stop();
-        activities[act].frame.setVisible(true);
-        this.dispose();
+        
+        HistorialController.next(activities[act].frame);
     }//GEN-LAST:event_imagenMouseClicked
         
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked

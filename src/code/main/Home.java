@@ -6,6 +6,7 @@
 package code.main;
 
 import code.grades.first.GameSelector;
+import code.util.HistorialController;
 import java.io.IOException;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -167,14 +168,12 @@ public class Home extends javax.swing.JFrame {
     private void tutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialMouseClicked
         // TODO add your handling code here:
         this.sound.stop();
-        new Tutorial().setVisible(true);
-        this.dispose();
+        HistorialController.next(new Tutorial());
     }//GEN-LAST:event_tutorialMouseClicked
 
     private void firstGradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstGradeActionPerformed
         // TODO add your handling code here:
-        new GameSelector(this.sound).setVisible(true);
-        this.dispose();
+        HistorialController.next(new GameSelector(this.sound));
     }//GEN-LAST:event_firstGradeActionPerformed
 /**/
 
