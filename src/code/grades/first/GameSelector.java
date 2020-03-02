@@ -8,6 +8,7 @@ package code.grades.first;
 import code.main.InWorkFrame;
 import code.grades.first.spanish.Write.Mariposa;
 import code.main.Home;
+import javax.sound.sampled.Clip;
 
 /**
  *
@@ -15,6 +16,7 @@ import code.main.Home;
  */
 public class GameSelector extends javax.swing.JFrame {
     
+    private Clip sound;
     // Game counter
     private int act = 0;
     // Games list
@@ -48,6 +50,11 @@ public class GameSelector extends javax.swing.JFrame {
      * Creates new form GameSelector
      */
     public GameSelector() {
+        initComponents();
+    }
+    
+    public GameSelector(Clip sound){
+        this.sound = sound;
         initComponents();
     }
     
@@ -158,6 +165,7 @@ public class GameSelector extends javax.swing.JFrame {
 
     private void imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagenMouseClicked
         // TODO add your handling code here:
+        sound.stop();
         activities[act].frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_imagenMouseClicked

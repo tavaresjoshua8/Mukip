@@ -17,6 +17,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  * @author tavar
  */
 public class Home extends javax.swing.JFrame {
+    Clip sound;
 
     /**
      * Creates new form Inicio
@@ -165,13 +166,14 @@ public class Home extends javax.swing.JFrame {
 
     private void tutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialMouseClicked
         // TODO add your handling code here:
+        this.sound.stop();
         new Tutorial().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_tutorialMouseClicked
 
     private void firstGradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstGradeActionPerformed
         // TODO add your handling code here:
-        new GameSelector().setVisible(true);
+        new GameSelector(this.sound).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_firstGradeActionPerformed
 /**/
@@ -184,7 +186,7 @@ public class Home extends javax.swing.JFrame {
 
     public void playSound(String soundName, String soundExt){
         try {
-            Clip sound = AudioSystem.getClip();
+            this.sound = AudioSystem.getClip();
             sound.open(
                     AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
                             String.format("/resources/sounds/main/%s.%s", soundName, soundExt)
