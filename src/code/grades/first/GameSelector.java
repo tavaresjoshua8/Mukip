@@ -5,6 +5,7 @@
  */
 package code.grades.first;
 
+import code.grades.first.alphabet.Alphabet;
 import code.main.InWorkFrame;
 import code.grades.first.spanish.Write.Mariposa;
 import code.main.Home;
@@ -22,7 +23,7 @@ public class GameSelector extends javax.swing.JFrame {
         new Activity("Escritura", "ABC", new Mariposa()),
         new Activity("Matemáticas", "matematicas", new InWorkFrame()),
         new Activity("Cuentos", new InWorkFrame()),
-        new Activity("Abecedario", new InWorkFrame()),
+        new Activity("Abecedario", new Alphabet()),
         new Activity("Números", "numeros", new InWorkFrame())
     };
     

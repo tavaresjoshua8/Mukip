@@ -9,6 +9,11 @@ import code.grades.first.spanish.FullWrite.Gato;
 import code.grades.first.spanish.Options.Conejo;
 import code.main.Home;
 import java.awt.Color;
+import java.io.IOException;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 
 /**
@@ -183,6 +188,11 @@ public class NameToImage extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/Tortugus.jpg"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, 200));
@@ -310,6 +320,26 @@ public class NameToImage extends javax.swing.JFrame {
         expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG")));
     }//GEN-LAST:event_reiniciarActionPerformed
 
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        playSound("ahh","wav");
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    public void playSound(String soundName, String soundExt){
+        try {
+            Clip sound = AudioSystem.getClip();
+            sound.open(
+                    AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
+                            String.format("/resources/sounds/main/%s.%s", soundName, soundExt)
+                    ))
+            );
+            sound.start();
+            Thread.sleep(100);
+        } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
+            System.out.println(e.getMessage());
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
