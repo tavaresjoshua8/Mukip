@@ -5,7 +5,6 @@
  */
 package code.grades.first.alphabet;
 
-import code.util.HistorialController;
 import code.util.Letter;
 import java.awt.Color;
 import static java.awt.Color.*;
@@ -161,14 +160,18 @@ public class Alphabet extends javax.swing.JFrame {
         title.setForeground( letter.color );
         jPanel1.setBackground( letter.color );
         
-        playSound(letters[numLetra].getStringName(),"wav");
+        playSound();
     }
     
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // TODO add your handling code here:
-        playSound(letters[numLetra].getStringName(),"wav");
+        playSound();
     }//GEN-LAST:event_playActionPerformed
 
+    public void playSound(){
+        playSound(letters[numLetra].getStringName(),"wav");
+    }
+    
     public void playSound(String soundName, String soundExt){
         try {
             sound.stop();
