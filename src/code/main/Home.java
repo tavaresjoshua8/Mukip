@@ -6,6 +6,7 @@
 package code.main;
 
 import code.grades.first.GameSelector;
+import code.util.HistorialController;
 import java.io.IOException;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -17,6 +18,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  * @author tavar
  */
 public class Home extends javax.swing.JFrame {
+    Clip sound;
 
     /**
      * Creates new form Inicio
@@ -165,14 +167,13 @@ public class Home extends javax.swing.JFrame {
 
     private void tutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialMouseClicked
         // TODO add your handling code here:
-        new Tutorial().setVisible(true);
-        this.dispose();
+        this.sound.stop();
+        HistorialController.next(new Tutorial());
     }//GEN-LAST:event_tutorialMouseClicked
 
     private void firstGradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstGradeActionPerformed
         // TODO add your handling code here:
-        new GameSelector().setVisible(true);
-        this.dispose();
+        HistorialController.next(new GameSelector(this.sound));
     }//GEN-LAST:event_firstGradeActionPerformed
 /**/
 
@@ -184,7 +185,7 @@ public class Home extends javax.swing.JFrame {
 
     public void playSound(String soundName, String soundExt){
         try {
-            Clip sound = AudioSystem.getClip();
+            this.sound = AudioSystem.getClip();
             sound.open(
                     AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
                             String.format("/resources/sounds/main/%s.%s", soundName, soundExt)

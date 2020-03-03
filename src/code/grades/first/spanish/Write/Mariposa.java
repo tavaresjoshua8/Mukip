@@ -6,6 +6,7 @@
 package code.grades.first.spanish.Write;
 
 import code.main.Home;
+import code.util.HistorialController;
 import java.awt.Color;
 import java.io.IOException;
 import java.net.URL;
@@ -251,13 +252,11 @@ public class Mariposa extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void volver() {
-        new Home().setVisible(true);
-        dispose();
+        HistorialController.back();
     }
     
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        new Galleta().setVisible(true);
-        this.dispose();
+        HistorialController.next( new Galleta() );
     }//GEN-LAST:event_siguienteActionPerformed
     Icon icono;
     public void verificar() throws InterruptedException{
@@ -303,8 +302,7 @@ public class Mariposa extends javax.swing.JFrame {
     
     private void MenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuPrincipalActionPerformed
         // TODO add your handling code here:
-        new Home().setVisible(true);
-        this.dispose();
+        HistorialController.nextMain();
     }//GEN-LAST:event_MenuPrincipalActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
@@ -322,8 +320,7 @@ public class Mariposa extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        new Home().setVisible(true);
-        this.dispose();
+        HistorialController.back();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void MCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_MCaretUpdate

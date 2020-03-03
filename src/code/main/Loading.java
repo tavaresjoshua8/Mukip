@@ -5,7 +5,9 @@
  */
 package code.main;
 
-import code.main.Home;
+import code.util.HistorialController;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -91,7 +93,6 @@ public class Loading extends javax.swing.JFrame {
      */
     public static void main(String args[]) throws InterruptedException {
         /* Set the Nimbus look and feel */
-        Loading load = new Loading();
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -115,6 +116,7 @@ public class Loading extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
+        Loading load = new Loading();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -122,22 +124,19 @@ public class Loading extends javax.swing.JFrame {
             }
         });
         
-        try{
-            for(int i = 0; i <=100; i++){
-                Thread.sleep(50);
-                load.progressBar.setValue(i);
-            }
-        }catch(Exception E){}
+        for(int i = 0; i <=100; i++){
+            Thread.sleep(50);
+            load.progressBar.setValue(i);
+        }
+        
         Thread.sleep(300);
-        load.dispose();
-        new Home().setVisible(true);
-       
+        HistorialController.next( new Home() );
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel phrase;
-    private javax.swing.JProgressBar progressBar;
+    public javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables
 }

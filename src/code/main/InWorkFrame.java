@@ -7,6 +7,7 @@ package code.main;
 
 import code.grades.first.GameSelector;
 import code.grades.first.GameSelector;
+import code.util.HistorialController;
 
 /**
  *
@@ -96,8 +97,7 @@ public class InWorkFrame extends javax.swing.JFrame {
 
     private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
         // TODO add your handling code here:
-        new GameSelector().setVisible(true);
-        this.dispose();
+        HistorialController.back();
     }//GEN-LAST:event_backMouseClicked
 
     /**

@@ -8,6 +8,7 @@ package code.grades.first.spanish.DragAndDrop;
 import code.grades.first.spanish.FullWrite.Gato;
 import code.grades.first.spanish.Options.Conejo;
 import code.main.Home;
+import code.util.HistorialController;
 import java.awt.Color;
 import java.io.IOException;
 import javax.sound.sampled.AudioSystem;
@@ -263,8 +264,7 @@ public class NameToImage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        new Conejo().setVisible(true);
-        this.dispose();
+        HistorialController.back();
     }//GEN-LAST:event_volverActionPerformed
 
     private void verificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verificarActionPerformed
@@ -282,14 +282,12 @@ public class NameToImage extends javax.swing.JFrame {
     }//GEN-LAST:event_verificarActionPerformed
 
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        new Gato().setVisible(true);
-        this.dispose();
+        HistorialController.next(new Gato());
     }//GEN-LAST:event_siguienteActionPerformed
 
     private void MenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuPrincipalActionPerformed
         // TODO add your handling code here:
-        new Home().setVisible(true);
-        this.dispose();
+        HistorialController.nextMain();
     }//GEN-LAST:event_MenuPrincipalActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
@@ -303,8 +301,7 @@ public class NameToImage extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        new Conejo().setVisible(true);
-        this.dispose();
+        HistorialController.back();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void reiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reiniciarActionPerformed

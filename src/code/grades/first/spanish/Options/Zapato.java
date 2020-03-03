@@ -7,6 +7,7 @@ package code.grades.first.spanish.Options;
 
 import code.grades.first.spanish.Write.Carro;
 import code.main.Home;
+import code.util.HistorialController;
 import java.awt.Color;
 
 /**
@@ -200,8 +201,7 @@ public class Zapato extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void volver(){
-        new Carro().setVisible(true);
-        dispose();
+        HistorialController.back();
     }
     
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
@@ -230,14 +230,12 @@ public class Zapato extends javax.swing.JFrame {
     }
     
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        new Conejo().setVisible(true);
-        this.dispose();
+        HistorialController.next( new Conejo() );
     }//GEN-LAST:event_siguienteActionPerformed
 
     private void MenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuPrincipalActionPerformed
         // TODO add your handling code here:
-        new Home().setVisible(true);
-        this.dispose();
+        HistorialController.nextMain();
     }//GEN-LAST:event_MenuPrincipalActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
@@ -247,8 +245,7 @@ public class Zapato extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        new Carro().setVisible(true);
-        this.dispose();
+        volver();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void z2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_z2ActionPerformed
