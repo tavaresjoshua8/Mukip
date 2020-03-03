@@ -5,6 +5,7 @@
  */
 package code.main;
 
+import code.tutorial.HomeTutorial;
 import code.util.HistorialController;
 
 /**
@@ -91,7 +92,7 @@ public class Tutorial extends javax.swing.JFrame {
 
     private void banderaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_banderaMouseClicked
         // TODO add your handling code here:
-        HistorialController.back();
+        HistorialController.next(new HomeTutorial());
     }//GEN-LAST:event_banderaMouseClicked
 
     /**

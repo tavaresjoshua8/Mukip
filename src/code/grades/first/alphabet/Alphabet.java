@@ -5,6 +5,8 @@
  */
 package code.grades.first.alphabet;
 
+import code.util.HistorialController;
+import code.util.Letter;
 import java.awt.Color;
 import static java.awt.Color.*;
 import java.io.IOException;
@@ -12,61 +14,42 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author hp
  */
 public class Alphabet extends javax.swing.JFrame {
+    
+    private Clip sound;
+    private int numLetra = 0;
+    private Letter[] letters = new Letter[26];
 
     /**
      * Creates new form ADeAbeja
      */
     public Alphabet() {
+        String[] references = {
+            "Abeja","Ballena","Conejo","Dinosaurio","Elefante","Foca","Gato","Husky","Iguana",
+            "Jirafa","Koala","León","Mukip","Naval","Oso","Panda","mosQuito","Ratón","Serpiente",
+            "Tortuga","Unicornio","Vaca","kiWi","Xipihas","Yak","Zorro"
+        };
+        Color[] colors = {
+            YELLOW,BLUE,CYAN,GREEN,GRAY,BLUE,ORANGE,RED,GREEN,
+            ORANGE,LIGHT_GRAY,ORANGE,BLUE,BLUE,BLACK,BLACK,BLACK,
+            GREEN,LIGHT_GRAY,GREEN,GREEN,PINK,BLACK,GRAY,BLUE,RED,
+            ORANGE
+        };
+        
+        int j = 0;
+        for (char i = 'a'; i <= 'z'; i++) {
+            letters[j] = new Letter(i, references[j], colors[j]);
+            j++;
+        }
+        
         initComponents();
     }
-
-    private int numLetra = 0;
-    private String[] letra = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"};
-    private String[] titulos = {
-        "A de Abeja",
-        "B de Ballena",
-        "C de Conejo",
-        "D de Dinosaurio",
-        "E de Elefante",
-        "F de Foca",
-        "G de Gato",
-        "H de Husky",
-        "I de Iguana",
-        "J de Jirafa",
-        "K de Koala",
-        "L de Leon",
-        "M de Mukip",
-        "N de Naval",
-        "Ñ de Ñu",
-        "O de Oso",
-        "P de Panda",
-        "Q de mosQuito",
-        "R de Ratón",
-        "S de Serpiente",
-        "T de Tortuga",
-        "U de Unicornio",
-        "V de Vaca",
-        "W de kiWi",
-        "X de Xipihas",
-        "Y de Yak",
-        "Z de Zorro"
-    };
-    private Color[] colores = {YELLOW,BLUE,CYAN,
-        GREEN,GRAY,BLUE,
-        ORANGE,RED,GREEN,
-        ORANGE,LIGHT_GRAY,ORANGE,BLUE,
-        BLUE,BLACK,BLACK, BLACK,
-        GREEN,LIGHT_GRAY,GREEN,
-        GREEN,PINK,BLACK,
-        GRAY,BLUE,RED,
-        ORANGE};
-    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -155,31 +138,45 @@ public class Alphabet extends javax.swing.JFrame {
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
         // TODO add your handling code here:
         numLetra++;
-        if(numLetra == 27) numLetra = 0;
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/alphabet/" + letra[numLetra] + ".PNG")));
-        title.setText(titulos[numLetra]);
-        title.setForeground(colores[numLetra]);
-        jPanel1.setBackground((colores[numLetra]));
+        if(numLetra > (letters.length - 1) ) numLetra = 0;
+        
+        updateLetter();
     }//GEN-LAST:event_rightMouseClicked
 
     private void leftMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leftMouseClicked
         // TODO add your handling code here:
         numLetra--;
-        if(numLetra == -1) numLetra = 26;
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/alphabet/" + letra[numLetra] + ".PNG")));
-        title.setText(titulos[numLetra]);
-        title.setForeground(colores[numLetra]);
-        jPanel1.setBackground((colores[numLetra]));
+        if(numLetra < 0) numLetra = letters.length - 1;
+        
+        updateLetter();
     }//GEN-LAST:event_leftMouseClicked
 
+    public void updateLetter(){
+        Letter letter = letters[numLetra];
+        
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                "/resources/images/grades/first/alphabet/" + letter.name + ".PNG"
+        )));
+        title.setText( letter.getReference() );
+        title.setForeground( letter.color );
+        jPanel1.setBackground( letter.color );
+        
+        playSound(letters[numLetra].getStringName(),"wav");
+    }
+    
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // TODO add your handling code here:
-        playSound(letra[numLetra],"wav");
+        playSound(letters[numLetra].getStringName(),"wav");
     }//GEN-LAST:event_playActionPerformed
 
     public void playSound(String soundName, String soundExt){
         try {
-            Clip sound = AudioSystem.getClip();
+            sound.stop();
+        } catch(Exception e){}
+        
+        try {
+            this.sound = AudioSystem.getClip();
+            
             sound.open(
                     AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
                             String.format("/resources/sounds/grades/first/spanish/alphabet/%s.%s", soundName, soundExt)
@@ -188,7 +185,7 @@ public class Alphabet extends javax.swing.JFrame {
             sound.start();
             Thread.sleep(100);
         } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
-            System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e);
         }
     }
     

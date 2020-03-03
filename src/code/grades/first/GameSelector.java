@@ -8,6 +8,7 @@ package code.grades.first;
 import code.grades.first.alphabet.Alphabet;
 import code.main.InWorkFrame;
 import code.grades.first.spanish.Write.Mariposa;
+import code.util.Activity;
 import code.util.HistorialController;
 import javax.sound.sampled.Clip;
 
@@ -28,25 +29,6 @@ public class GameSelector extends javax.swing.JFrame {
         new Activity("Abecedario", new Alphabet()),
         new Activity("Números", "numeros", new InWorkFrame())
     };
-    
-    // Game Class (helper)
-    public class Activity {
-        public String name;
-        public String image;
-        public javax.swing.JFrame frame;
-        
-        public Activity(String name, String image, javax.swing.JFrame frame){
-            this.name = name;
-            this.image = image;
-            this.frame = frame;
-        }
-        
-        public Activity(String name, javax.swing.JFrame frame){
-            this.name = name;
-            this.image = name.toLowerCase();
-            this.frame = frame;
-        }
-    }
     /**
      * Creates new form GameSelector
      */
