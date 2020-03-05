@@ -22,7 +22,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
         
-        Sound.playSound(new SoundPath("menuSoundtrack").setFolder("main"));
+        Sound.play(new SoundPath("menuSoundtrack").setFolder("main"));
     }
 
     /**

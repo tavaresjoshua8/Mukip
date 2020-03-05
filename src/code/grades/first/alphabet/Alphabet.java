@@ -162,9 +162,7 @@ public class Alphabet extends javax.swing.JFrame {
     }//GEN-LAST:event_playActionPerformed
 
     public void playSound(Letter letter){
-        Sound.stop();
-        
-        Sound.playSound(
+        Sound.play(
             new SoundPath(
                 letter.getStringName()
             ).setFolder("grades/first/spanish/alphabet")

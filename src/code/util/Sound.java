@@ -23,7 +23,7 @@ public abstract class Sound {
     
     private static Clip sound;
     
-    public static void playSound(SoundPath path) {
+    public static void play(SoundPath path) {
         // If other clip are reproducing
         stop();
         
