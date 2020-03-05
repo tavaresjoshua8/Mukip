@@ -7,25 +7,22 @@ package code.main;
 
 import code.grades.first.GameSelector;
 import code.util.HistorialController;
-import java.io.IOException;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
+import code.util.Sound;
+import code.util.SoundPath;
 
 /**
  *
  * @author tavar
  */
 public class Home extends javax.swing.JFrame {
-    Clip sound;
 
     /**
      * Creates new form Inicio
      */
     public Home() {
         initComponents();
-        playSound("menuSoundtrack", "wav");
+        
+        Sound.playSound(new SoundPath("menuSoundtrack").setFolder("main"));
     }
 
     /**
@@ -167,36 +164,15 @@ public class Home extends javax.swing.JFrame {
 
     private void tutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialMouseClicked
         // TODO add your handling code here:
-        this.sound.stop();
+        Sound.stop();
         HistorialController.next(new Tutorial());
     }//GEN-LAST:event_tutorialMouseClicked
 
     private void firstGradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstGradeActionPerformed
         // TODO add your handling code here:
-        HistorialController.next(new GameSelector(this.sound));
+        HistorialController.next(new GameSelector());
     }//GEN-LAST:event_firstGradeActionPerformed
-/**/
 
-    /**
-     *
-     * @param soundName Name of the sound
-     * @param soundExt Extenssion of the sound (wav, mp3)
-     */
-
-    public void playSound(String soundName, String soundExt){
-        try {
-            this.sound = AudioSystem.getClip();
-            sound.open(
-                    AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
-                            String.format("/resources/sounds/main/%s.%s", soundName, soundExt)
-                    ))
-            );
-            sound.start();
-            Thread.sleep(100);
-        } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
-            System.out.println(e.getMessage());
-        }
-    }
     /**
      * @param args the command line arguments
      */

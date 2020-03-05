@@ -10,15 +10,13 @@ import code.main.InWorkFrame;
 import code.grades.first.spanish.Write.Mariposa;
 import code.util.Activity;
 import code.util.HistorialController;
-import javax.sound.sampled.Clip;
+import code.util.Sound;
 
 /**
  *
  * @author hp
  */
 public class GameSelector extends javax.swing.JFrame {
-    
-    private Clip sound;
     // Game counter
     private int act = 0;
     // Games list
@@ -33,11 +31,6 @@ public class GameSelector extends javax.swing.JFrame {
      * Creates new form GameSelector
      */
     public GameSelector() {
-        initComponents();
-    }
-    
-    public GameSelector(Clip sound){
-        this.sound = sound;
         initComponents();
     }
     
@@ -147,7 +140,7 @@ public class GameSelector extends javax.swing.JFrame {
 
     private void imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagenMouseClicked
         // TODO add your handling code here:
-        sound.stop();
+        Sound.stop();
         
         HistorialController.next(activities[act].frame);
     }//GEN-LAST:event_imagenMouseClicked
@@ -172,7 +165,7 @@ public class GameSelector extends javax.swing.JFrame {
         Activity actualActivity = activities[act];
         
         activity.setText(actualActivity.name);
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/" + actualActivity.image + ".PNG")));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/" + actualActivity.image + ".png")));
     }
     /**
      * @param args the command line arguments

@@ -6,8 +6,6 @@
 package code.main;
 
 import code.util.HistorialController;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *

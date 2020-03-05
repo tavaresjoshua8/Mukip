@@ -19,6 +19,26 @@ public class HistorialController {
     private static Stack historial;
     private static JFrame actualFrame;
     
+    public HistorialController() throws InterruptedException{
+        historial = new Stack();
+        Loading load = new Loading();
+        actualFrame = load;
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                load.setVisible(true);
+            }
+        });
+        
+        for(int i = 0; i <=100; i++){
+            Thread.sleep(50);
+            load.progressBar.setValue(i);
+        }
+        
+        Thread.sleep(300);
+        next( new Home() );
+    }
+    
     // Go to the back frame
     public static void back(){
         // Close and delete actual frame
@@ -54,22 +74,6 @@ public class HistorialController {
     }
     
     public static void main(String[] args) throws InterruptedException {
-        historial = new Stack();
-        Loading load = new Loading();
-        actualFrame = load;
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                load.setVisible(true);
-            }
-        });
-        
-        for(int i = 0; i <=100; i++){
-            Thread.sleep(50);
-            load.progressBar.setValue(i);
-        }
-        
-        Thread.sleep(300);
-        next( new Home() );
+        new HistorialController();
     }
 }

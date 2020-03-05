@@ -6,14 +6,10 @@
 package code.grades.first.alphabet;
 
 import code.util.Letter;
+import code.util.Sound;
+import code.util.SoundPath;
 import java.awt.Color;
 import static java.awt.Color.*;
-import java.io.IOException;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,7 +17,6 @@ import javax.swing.JOptionPane;
  */
 public class Alphabet extends javax.swing.JFrame {
     
-    private Clip sound;
     private int numLetra = 0;
     private Letter[] letters = new Letter[26];
 
@@ -153,43 +148,27 @@ public class Alphabet extends javax.swing.JFrame {
     public void updateLetter(){
         Letter letter = letters[numLetra];
         
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                "/resources/images/grades/first/alphabet/" + letter.name + ".PNG"
-        )));
         title.setText( letter.getReference() );
         title.setForeground( letter.color );
         jPanel1.setBackground( letter.color );
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/alphabet/" + letter.getStringName() + ".png")));
         
-        playSound();
+        playSound(letter);
     }
     
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // TODO add your handling code here:
-        playSound();
+        playSound(letters[numLetra]);
     }//GEN-LAST:event_playActionPerformed
 
-    public void playSound(){
-        playSound(letters[numLetra].getStringName(),"wav");
-    }
-    
-    public void playSound(String soundName, String soundExt){
-        try {
-            sound.stop();
-        } catch(Exception e){}
+    public void playSound(Letter letter){
+        Sound.stop();
         
-        try {
-            this.sound = AudioSystem.getClip();
-            
-            sound.open(
-                    AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
-                            String.format("/resources/sounds/grades/first/spanish/alphabet/%s.%s", soundName, soundExt)
-                    ))
-            );
-            sound.start();
-            Thread.sleep(100);
-        } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        Sound.playSound(
+            new SoundPath(
+                letter.getStringName()
+            ).setFolder("grades/first/spanish/alphabet")
+        );
     }
     
     /**
