@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.grades.first;
+package code.grades.first.stories;
 
+import code.grades.first.*;
 import code.grades.first.alphabet.Alphabet;
 import code.main.InWorkFrame;
-import code.grades.first.spanish.Write.Mariposa;
-import code.grades.first.stories.StorySelector;
+import code.grades.first.stories.story1.Story1;
 import code.util.Activity;
 import code.util.HistorialController;
 import code.util.Sound;
@@ -17,21 +17,21 @@ import code.util.Sound;
  *
  * @author hp
  */
-public class GameSelector extends javax.swing.JFrame {
+public class StorySelector extends javax.swing.JFrame {
     // Game counter
     private int act = 0;
     // Games list
     Activity[] activities = {
-        new Activity("Escritura", "ABC", new Mariposa()),
-        new Activity("Matemáticas", "matematicas", new InWorkFrame()),
-        new Activity("Cuentos", new StorySelector()),
+        new Activity("Mi día de suerte", "miDiaDeSuerte", new Story1()),
+        /*new Activity("Matemáticas", "matematicas", new InWorkFrame()),
+        new Activity("Cuentos", new InWorkFrame()),
         new Activity("Abecedario", new Alphabet()),
-        new Activity("Números", "numeros", new InWorkFrame())
+        new Activity("Números", "numeros", new InWorkFrame())*/
     };
     /**
      * Creates new form GameSelector
      */
-    public GameSelector() {
+    public StorySelector() {
         initComponents();
     }
     
@@ -51,10 +51,10 @@ public class GameSelector extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         activity = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         imagen = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        background = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -90,45 +90,48 @@ public class GameSelector extends javax.swing.JFrame {
 
         title.setFont(new java.awt.Font("Myriad Hebrew", 1, 80)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
-        title.setText("Actividades");
-        getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 450, 90));
+        title.setText("Cuentos:");
+        getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 370, 90));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         activity.setBackground(new java.awt.Color(255, 255, 255));
         activity.setFont(new java.awt.Font("Myriad Hebrew", 1, 48)); // NOI18N
-        activity.setForeground(new java.awt.Color(0, 204, 204));
+        activity.setForeground(new java.awt.Color(0, 204, 51));
         activity.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        activity.setText("Escritura");
-        jPanel4.add(activity, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 440, 50));
+        activity.setText("Mi día de suerte");
+        activity.setToolTipText("");
+        jPanel4.add(activity, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 670, 50));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, 440, 70));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 540, 670, 70));
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel3.setBackground(new java.awt.Color(0, 204, 51));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 530, 460, 90));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 530, 690, 90));
+
+        jPanel2.setBackground(new java.awt.Color(0, 204, 51));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/ABC.png"))); // NOI18N
+        imagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/storySelector/miDiaDeSuerte.png"))); // NOI18N
         imagen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         imagen.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imagenMouseClicked(evt);
             }
         });
-        jPanel1.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 320));
+        jPanel1.add(imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 230, 310));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 330, 320));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 250, -1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 350, 340));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 270, 340));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/bgActividadesPrimero.jpg"))); // NOI18N
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1320, 680));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/bgCuentos.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 0, -1, -1));
 
         setSize(new java.awt.Dimension(950, 659));
         setLocationRelativeTo(null);
@@ -141,9 +144,7 @@ public class GameSelector extends javax.swing.JFrame {
 
     private void imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagenMouseClicked
         // TODO add your handling code here:
-        Sound.stop();
-        
-        HistorialController.next(activities[act].frame);
+        //HistorialController.next(activities[act].frame);
     }//GEN-LAST:event_imagenMouseClicked
         
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
@@ -166,7 +167,7 @@ public class GameSelector extends javax.swing.JFrame {
         Activity actualActivity = activities[act];
         
         activity.setText(actualActivity.name);
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/" + actualActivity.image + ".png")));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/storySelector" + actualActivity.image + ".png")));
     }
     /**
      * @param args the command line arguments
@@ -185,20 +186,21 @@ public class GameSelector extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GameSelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StorySelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GameSelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StorySelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GameSelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StorySelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GameSelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StorySelector.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GameSelector().setVisible(true);
+                new StorySelector().setVisible(true);
             }
         });
     }
@@ -206,8 +208,8 @@ public class GameSelector extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel activity;
     private javax.swing.JLabel back;
-    private javax.swing.JLabel background;
     private javax.swing.JLabel imagen;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
