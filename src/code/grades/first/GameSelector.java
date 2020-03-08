@@ -6,11 +6,11 @@
 package code.grades.first;
 
 import code.grades.first.alphabet.Alphabet;
-import code.main.InWorkFrame;
+import code.menu.InWorkFrame;
 import code.grades.first.spanish.Write.Mariposa;
 import code.grades.first.stories.StorySelector;
-import code.util.Activity;
-import code.util.HistorialController;
+import code.util.helpers.selector.Activity;
+import code.util.controllers.HistorialController;
 import code.util.Sound;
 
 /**
@@ -166,7 +166,7 @@ public class GameSelector extends javax.swing.JFrame {
         Activity actualActivity = activities[act];
         
         activity.setText(actualActivity.name);
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GameSelector/" + actualActivity.image + ".png")));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource( actualActivity.image.getFullPath() )));
     }
     /**
      * @param args the command line arguments

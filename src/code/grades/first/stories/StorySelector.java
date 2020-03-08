@@ -5,13 +5,9 @@
  */
 package code.grades.first.stories;
 
-import code.grades.first.*;
-import code.grades.first.alphabet.Alphabet;
-import code.main.InWorkFrame;
 import code.grades.first.stories.story1.Story1;
-import code.util.Activity;
-import code.util.HistorialController;
-import code.util.Sound;
+import code.util.helpers.selector.Activity;
+import code.util.controllers.HistorialController;
 
 /**
  *
@@ -22,11 +18,7 @@ public class StorySelector extends javax.swing.JFrame {
     private int act = 0;
     // Games list
     Activity[] activities = {
-        new Activity("Mi día de suerte", "miDiaDeSuerte", new Story1()),
-        /*new Activity("Matemáticas", "matematicas", new InWorkFrame()),
-        new Activity("Cuentos", new InWorkFrame()),
-        new Activity("Abecedario", new Alphabet()),
-        new Activity("Números", "numeros", new InWorkFrame())*/
+        new Activity("Mi día de suerte", "miDiaDeSuerte", new Story1())
     };
     /**
      * Creates new form GameSelector
@@ -144,7 +136,7 @@ public class StorySelector extends javax.swing.JFrame {
 
     private void imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagenMouseClicked
         // TODO add your handling code here:
-        //HistorialController.next(activities[act].frame);
+        HistorialController.next(activities[act].frame);
     }//GEN-LAST:event_imagenMouseClicked
         
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
@@ -167,7 +159,7 @@ public class StorySelector extends javax.swing.JFrame {
         Activity actualActivity = activities[act];
         
         activity.setText(actualActivity.name);
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/storySelector" + actualActivity.image + ".png")));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/storySelector/" + actualActivity.image + ".png")));
     }
     /**
      * @param args the command line arguments

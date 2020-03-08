@@ -5,9 +5,8 @@
  */
 package code.grades.first.alphabet;
 
-import code.util.Letter;
+import code.util.helpers.selector.Letter;
 import code.util.Sound;
-import code.util.SoundPath;
 import java.awt.Color;
 import static java.awt.Color.*;
 
@@ -151,7 +150,9 @@ public class Alphabet extends javax.swing.JFrame {
         title.setText( letter.getReference() );
         title.setForeground( letter.color );
         jPanel1.setBackground( letter.color );
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/alphabet/" + letter.getStringName() + ".png")));
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                letter.getImagePath()
+        )));
         
         playSound(letter);
     }
@@ -162,11 +163,7 @@ public class Alphabet extends javax.swing.JFrame {
     }//GEN-LAST:event_playActionPerformed
 
     public void playSound(Letter letter){
-        Sound.play(
-            new SoundPath(
-                letter.getStringName()
-            ).setFolder("grades/first/spanish/alphabet")
-        );
+        Sound.play( letter.getSound() );
     }
     
     /**

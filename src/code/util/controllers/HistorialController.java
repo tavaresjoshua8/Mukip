@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.util;
+package code.util.controllers;
 
-import code.main.Home;
-import code.main.Loading;
+import code.menu.Home;
+import code.menu.Loading;
 import java.util.Stack;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;

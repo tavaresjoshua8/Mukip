@@ -6,8 +6,8 @@
 package code.grades.first.spanish.Options;
 
 import code.grades.first.spanish.Write.Carro;
-import code.main.Home;
-import code.util.HistorialController;
+import code.menu.Home;
+import code.util.controllers.HistorialController;
 import java.awt.Color;
 
 /**

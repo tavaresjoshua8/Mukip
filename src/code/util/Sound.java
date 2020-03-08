@@ -5,6 +5,8 @@
  */
 package code.util;
 
+import code.util.controllers.HistorialController;
+import code.util.helpers.paths.SoundPath;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,8 +39,10 @@ public abstract class Sound {
             
             sound.open(audioStream);
             sound.start();
-        } catch (IOException | LineUnavailableException | UnsupportedAudioFileException ex) {
+        } catch (LineUnavailableException | UnsupportedAudioFileException ex) {
             JOptionPane.showMessageDialog(null, ex);
+        } catch (IOException ex){
+            System.out.println("Archivo no encontrado");
         }
     }
     

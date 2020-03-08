@@ -5,7 +5,7 @@
  */
 package code.grades.first.spanish;
 
-import code.util.HistorialController;
+import code.util.controllers.HistorialController;
 
 /**
  *

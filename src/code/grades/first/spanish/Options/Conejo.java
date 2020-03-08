@@ -6,7 +6,7 @@
 package code.grades.first.spanish.Options;
 
 import code.grades.first.spanish.DragAndDrop.NameToImage;
-import code.util.HistorialController;
+import code.util.controllers.HistorialController;
 import java.awt.Color;
 
 /**

@@ -6,6 +6,7 @@
 package code.tutorial;
 
 import code.tutorial.home.*;
+import code.util.controllers.HistorialController;
 
 /**
  *
@@ -200,6 +201,11 @@ public class HomeTutorial extends javax.swing.JFrame {
 
         next.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/miniRight.png"))); // NOI18N
         next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        next.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextMouseClicked(evt);
+            }
+        });
         getContentPane().add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 570, -1, -1));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/home.png"))); // NOI18N
@@ -241,6 +247,11 @@ public class HomeTutorial extends javax.swing.JFrame {
         // TODO add your handling code here:
         new GameSelector().setVisible(true);
     }//GEN-LAST:event_botonesMouseClicked
+
+    private void nextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextMouseClicked
+        // TODO add your handling code here:
+        HistorialController.nextMain();
+    }//GEN-LAST:event_nextMouseClicked
 /**/
 
     /**

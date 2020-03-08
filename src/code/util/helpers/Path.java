@@ -3,37 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.util;
+package code.util.helpers;
 
 /**
  *
  * @author tavar
+ * @param <T> Subclass
  */
-public class SoundPath {
+public abstract class Path<T> {
     // Constants
-    private final String SOUND_PATH = "/resources/sounds/";
+    private final String BASE_PATH = "/resources/";
     
     // Variables
-    private String name; 
-    private String path = SOUND_PATH;
-    private String ext = ".wav";
+    protected String name; 
+    protected String path;
+    protected String ext;
     
     /**
      *
-     * @param name Name of the file
+     * @param defaultPath /resources/sounds/
      */
-    public SoundPath(String name){
-        this.name = name;
+    public Path(String defaultPath){
+        this.path = BASE_PATH + defaultPath + "/";
     }
     
     /**
      *
      * @param folder Not include "/" final or starter
-     * Example: setFolder("grades/first/spanish/spanish")
+     * Example: inFolder("grades/first/spanish")
+     * Example2: inFolder("grades").inFolder("first").inFolder("spanish")
      */
-    public SoundPath setFolder(String folder){
-        this.path = SOUND_PATH + folder + "/";
-        return this;
+    public T inFolder(String folder){
+        this.path += folder + "/";
+        return (T)this;
     }
     
     /**
@@ -41,9 +43,9 @@ public class SoundPath {
      * @param ext Use only name, without "."
      * Example: setExtension("wav")
      */
-    public SoundPath setExtension(String ext){
+    public T setExtension(String ext){
         this.ext = "." + ext;
-        return this;
+        return (T)this;
     }
     
     /**

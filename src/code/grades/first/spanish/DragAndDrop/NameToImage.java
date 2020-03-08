@@ -7,8 +7,8 @@ package code.grades.first.spanish.DragAndDrop;
 
 import code.grades.first.spanish.FullWrite.Gato;
 import code.grades.first.spanish.Options.Conejo;
-import code.main.Home;
-import code.util.HistorialController;
+import code.menu.Home;
+import code.util.controllers.HistorialController;
 import java.awt.Color;
 import java.io.IOException;
 import javax.sound.sampled.AudioSystem;

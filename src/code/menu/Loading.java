@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.main;
+package code.menu;
 
-import code.util.HistorialController;
+import code.util.controllers.HistorialController;
 
 /**
  *

@@ -5,9 +5,8 @@
  */
 package code.grades.first.stories.story1;
 
-import code.util.Letter;
+import code.util.helpers.stories.MyLuckyDay;
 import code.util.Sound;
-import code.util.SoundPath;
 
 /**
  *
@@ -15,21 +14,32 @@ import code.util.SoundPath;
  */
 public class Story1 extends javax.swing.JFrame {
 
-    private int numLetra = 0;
-    private Letter[] letters = new Letter[18];
+    private int numPage = 1;
+    private MyLuckyDay[] pages = new MyLuckyDay[23];
     
     /**
      * Creates new form Story1
      */
     public Story1() {
+        
+        pages[0] = new MyLuckyDay("inicio");
+        
+        int j = 1;
+        for (char i = 'a'; i <= 'v'; i++) {
+            pages[j] = new MyLuckyDay(i);
+            j++;
+        }
+        
         initComponents();
     }
     
-    public void updateLetter(){
-        Letter letter = letters[numLetra];
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/MyLuckyDay" + letter.getStringName() + ".png")));
+    public void updatePage(){
+        MyLuckyDay page = pages[numPage];
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                page.getImagePath()
+        )));
         
-        playSound(letter);
+        playSound(page);
     }
 
     /**
@@ -87,7 +97,7 @@ public class Story1 extends javax.swing.JFrame {
         jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/sounds/grades/first/stories/MyLuckyDay/inicio.png"))); // NOI18N
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/MyLuckyDay/inicio.png"))); // NOI18N
         jPanel2.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 530, 410));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 660, 430));
@@ -103,28 +113,24 @@ public class Story1 extends javax.swing.JFrame {
 
     private void leftMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leftMouseClicked
         // TODO add your handling code here:
-        numLetra--;
-        if(numLetra < 0) numLetra = letters.length - 1;
+        numPage--;
+        if(numPage < 0) numPage = pages.length - 1;
         
-        updateLetter();
+        updatePage();
     }//GEN-LAST:event_leftMouseClicked
 
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
         // TODO add your handling code here:
-        numLetra++;
-        if(numLetra > (letters.length - 1) ) numLetra = 0;
+        numPage++;
+        if(numPage > (pages.length - 1) ) numPage = 0;
         
-        updateLetter();
+        updatePage();
     }//GEN-LAST:event_rightMouseClicked
 
-    public void playSound(Letter letter){
+    public void playSound(MyLuckyDay page){
         Sound.stop();
         
-        Sound.play(
-            new SoundPath(
-                letter.getStringName()
-            ).setFolder("grades/first/stories/MyLuckyDay")
-        );
+        Sound.play(page.getSound());
     }
     
     /**

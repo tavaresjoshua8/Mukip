@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.main;
+package code.menu;
 
 import code.grades.first.GameSelector;
-import code.util.HistorialController;
+import code.util.controllers.HistorialController;
 import code.util.Sound;
-import code.util.SoundPath;
+import code.util.helpers.paths.SoundPath;
 
 /**
  *
@@ -22,7 +22,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
         
-        Sound.play(new SoundPath("menuSoundtrack").setFolder("main"));
+        Sound.play(new SoundPath("menuSoundtrack").inFolder("main"));
     }
 
     /**

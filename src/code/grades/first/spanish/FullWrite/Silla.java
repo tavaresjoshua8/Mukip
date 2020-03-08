@@ -7,7 +7,7 @@ package code.grades.first.spanish.FullWrite;
 
 
 import code.grades.first.spanish.Finish;
-import code.util.HistorialController;
+import code.util.controllers.HistorialController;
 import java.awt.Color;
 
 /**
