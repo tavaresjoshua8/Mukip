@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package code.grades.first.spanish;
+package code.grades.first.math.milkExample;
+
 
 import code.util.controllers.HistorialController;
 
@@ -45,12 +46,17 @@ public class Finish extends javax.swing.JFrame {
 
         home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/home.png"))); // NOI18N
         home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeMouseClicked(evt);
+            }
+        });
         getContentPane().add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 102, 102));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("y más juegos como estos están por venir!");
+        jLabel2.setText("¡y más juegos como estos están por venir!");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 840, 60));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -62,20 +68,20 @@ public class Finish extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 102, 102));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Has completado todos los juegos de escritura!");
+        jLabel4.setText("¡Has completado todos los juegos de contar envases de leche!");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 840, 60));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 204, 204));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Felicidades!");
+        jLabel5.setText("¡Felicidades!");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 840, 60));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 102, 102));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Por qué no dar un vistazo a los demás juegos");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 840, 60));
+        jLabel6.setText("¿Por qué no dar un vistazo a los demás juegos");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 860, 60));
 
         Mukip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/correr.gif"))); // NOI18N
         Mukip.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -96,6 +102,11 @@ public class Finish extends javax.swing.JFrame {
         // TODO add your handling code here:
         HistorialController.nextMain();
     }//GEN-LAST:event_MukipMouseClicked
+
+    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
+        // TODO add your handling code here:
+        HistorialController.nextMain();
+    }//GEN-LAST:event_homeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -122,6 +133,18 @@ public class Finish extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Finish.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

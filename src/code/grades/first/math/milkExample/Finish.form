@@ -37,6 +37,9 @@
           <Color id="Hand Cursor"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeMouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="830" y="10" width="-1" height="-1"/>
@@ -52,7 +55,7 @@
           <Color blue="66" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="y m&#xe1;s juegos como estos est&#xe1;n por venir!"/>
+        <Property name="text" type="java.lang.String" value="&#xa1;y m&#xe1;s juegos como estos est&#xe1;n por venir!"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -86,7 +89,7 @@
           <Color blue="66" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Has completado todos los juegos de escritura!"/>
+        <Property name="text" type="java.lang.String" value="&#xa1;Has completado todos los juegos de contar envases de leche!"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -103,7 +106,7 @@
           <Color blue="cc" green="cc" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Felicidades!"/>
+        <Property name="text" type="java.lang.String" value="&#xa1;Felicidades!"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -120,11 +123,11 @@
           <Color blue="66" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Por qu&#xe9; no dar un vistazo a los dem&#xe1;s juegos"/>
+        <Property name="text" type="java.lang.String" value="&#xbf;Por qu&#xe9; no dar un vistazo a los dem&#xe1;s juegos"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="70" y="240" width="840" height="60"/>
+          <AbsoluteConstraints x="50" y="240" width="860" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
