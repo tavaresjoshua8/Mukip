@@ -5,6 +5,7 @@
  */
 package code.grades.first.math.appleExample;
 
+import code.grades.first.Finish;
 import code.util.controllers.HistorialController;
 import java.awt.Color;
 

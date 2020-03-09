@@ -6,6 +6,7 @@
 package code.grades.first.math.WheatExample;
 
 
+import code.grades.first.Finish;
 import code.util.controllers.HistorialController;
 import java.awt.Color;
 

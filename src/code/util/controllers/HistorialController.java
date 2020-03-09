@@ -9,7 +9,6 @@ import code.menu.Home;
 import code.menu.Loading;
 import java.util.Stack;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 /**
  *
  * @author tavar
@@ -24,10 +23,8 @@ public class HistorialController {
         Loading load = new Loading();
         actualFrame = load;
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                load.setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            load.setVisible(true);
         });
         
         for(int i = 0; i <=100; i++){
@@ -71,6 +68,11 @@ public class HistorialController {
     public static void nextMain(){
         historial.clear();
         next( new Home() );
+    }
+    
+    public static void nextGameSelector(){
+        historial.clear();
+        next(new code.grades.first.GameSelector() );
     }
     
     public static void main(String[] args) throws InterruptedException {
