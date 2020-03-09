@@ -6,8 +6,9 @@
 package code.grades.first.stories;
 
 import code.grades.first.stories.story1.*;
-import code.util.helpers.selector.Activity;
+import code.util.Sound;
 import code.util.controllers.HistorialController;
+import code.util.helpers.selector.Story;
 
 /**
  *
@@ -17,9 +18,9 @@ public class StorySelector extends javax.swing.JFrame {
     // Game counter
     private int act = 0;
     // Games list
-    Activity[] activities = {
-        new Activity("Mi día de suerte", "miDiaDeSuerte", new Story0()),
-        new Activity("Ardilla miedosa", "scarySandy", new Story1())
+    Story[] stories = {
+        new Story("Mi día de suerte", "miDiaDeSuerte", new Story0()),
+        new Story("Ardilla miedosa", "scarySandy", new Story1())
     };
     /**
      * Creates new form GameSelector
@@ -137,30 +138,34 @@ public class StorySelector extends javax.swing.JFrame {
 
     private void imagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagenMouseClicked
         // TODO add your handling code here:
-        HistorialController.next(activities[act].frame);
+        HistorialController.next(stories[act].frame);
     }//GEN-LAST:event_imagenMouseClicked
         
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
         // TODO add your handling code here:
         act++;
-        if(act > (activities.length-1) ) act = 0;
+        if(act > (stories.length-1) ) act = 0;
         
-        updateActivity();
+        updateStory();
     }//GEN-LAST:event_rightMouseClicked
 
     private void leftMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leftMouseClicked
         // TODO add your handling code here:
         act--;
-        if(act < 0) act = activities.length-1;
+        if(act < 0) act = stories.length-1;
         
-        updateActivity();
+        updateStory();
     }//GEN-LAST:event_leftMouseClicked
 
-    private void updateActivity(){
-        Activity actualActivity = activities[act];
+    private void updateStory(){
+        Story actualStory = stories[act];
         
-        activity.setText(actualActivity.name);
-        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/storySelector/" + actualActivity.image + ".png")));
+        activity.setText(actualStory.name);
+        
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(
+                actualStory.image.getFullPath()
+        )));
+        Sound.play(actualStory.sound);
     }
     /**
      * @param args the command line arguments

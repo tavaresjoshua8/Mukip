@@ -35,7 +35,7 @@ public class Loading extends javax.swing.JFrame {
            "este ni se va a ver"
        };
        
-       int selectedPhrase = (int) Math.round( Math.random() * (phrases.length + 1) ) - 1;
+       int selectedPhrase = (int) Math.round( Math.random() * (phrases.length) );
        
        this.phrase.setText( phrases[selectedPhrase] );
    }
