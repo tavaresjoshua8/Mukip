@@ -14,7 +14,7 @@ import code.util.Sound;
  */
 public class Story0 extends javax.swing.JFrame {
 
-    private int numPage = 1;
+    private int numPage = 0;
     private MyLuckyDay[] pages = new MyLuckyDay[23];
     
     /**
@@ -31,6 +31,8 @@ public class Story0 extends javax.swing.JFrame {
         }
         
         initComponents();
+        
+        this.left.setVisible(false);
     }
     
     public void updatePage(){
@@ -115,7 +117,9 @@ public class Story0 extends javax.swing.JFrame {
     private void leftMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leftMouseClicked
         // TODO add your handling code here:
         numPage--;
-        if(numPage < 0) numPage = pages.length - 1;
+        
+        if(numPage < (pages.length - 1) ) this.right.setVisible(true);
+        if(numPage <= 0) this.left.setVisible(false);
         
         updatePage();
     }//GEN-LAST:event_leftMouseClicked
@@ -123,7 +127,9 @@ public class Story0 extends javax.swing.JFrame {
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
         // TODO add your handling code here:
         numPage++;
-        if(numPage > (pages.length - 1) ) numPage = 0;
+        
+        if(numPage >= 1) this.left.setVisible(true);
+        if(numPage >= (pages.length - 1) ) this.right.setVisible(false);
         
         updatePage();
     }//GEN-LAST:event_rightMouseClicked
