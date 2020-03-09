@@ -36,7 +36,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Ardilla miedosa"/>
+        <Property name="text" type="java.lang.String" value="Mi d&#xed;a de suerte"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -132,7 +132,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/resources/images/grades/first/stories/ScarySandy/inicio.png"/>
+                  <Image iconType="3" name="/resources/images/grades/first/stories/MyLuckyDay/inicio.png"/>
                 </Property>
               </Properties>
               <Constraints>

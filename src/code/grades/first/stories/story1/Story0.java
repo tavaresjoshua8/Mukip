@@ -5,28 +5,28 @@
  */
 package code.grades.first.stories.story1;
 
+import code.util.helpers.stories.MyLuckyDay;
 import code.util.Sound;
-import code.util.helpers.stories.ScarySandy;
 
 /**
  *
  * @author hp
  */
-public class Story1 extends javax.swing.JFrame {
+public class Story0 extends javax.swing.JFrame {
 
     private int numPage = 1;
-    private ScarySandy[] pages = new ScarySandy[27];
+    private MyLuckyDay[] pages = new MyLuckyDay[23];
     
     /**
      * Creates new form Story1
      */
-    public Story1() {
+    public Story0() {
         
-        pages[0] = new ScarySandy("inicio");
+        pages[0] = new MyLuckyDay("inicio");
         
         int j = 1;
-        for (char i = 'a'; i <= 'z'; i++) {
-            pages[j] = new ScarySandy(i);
+        for (char i = 'a'; i <= 'v'; i++) {
+            pages[j] = new MyLuckyDay(i);
             j++;
         }
         
@@ -34,7 +34,7 @@ public class Story1 extends javax.swing.JFrame {
     }
     
     public void updatePage(){
-        ScarySandy page = pages[numPage];
+        MyLuckyDay page = pages[numPage];
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
                 page.getImagePath()
         )));
@@ -66,7 +66,7 @@ public class Story1 extends javax.swing.JFrame {
 
         title.setFont(new java.awt.Font("Myriad Hebrew", 1, 80)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
-        title.setText("Ardilla miedosa");
+        title.setText("Mi día de suerte");
         getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 610, 90));
 
         left.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/miniLeft.png"))); // NOI18N
@@ -98,7 +98,7 @@ public class Story1 extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/ScarySandy/inicio.png"))); // NOI18N
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/stories/MyLuckyDay/inicio.png"))); // NOI18N
         jPanel2.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 660, 430));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 680, 430));
@@ -128,7 +128,7 @@ public class Story1 extends javax.swing.JFrame {
         updatePage();
     }//GEN-LAST:event_rightMouseClicked
 
-    public void playSound(ScarySandy page){
+    public void playSound(MyLuckyDay page){
         Sound.stop();
         
         Sound.play(page.getSound());
@@ -151,20 +151,21 @@ public class Story1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Story1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Story0.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Story1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Story0.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Story1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Story0.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Story1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Story0.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Story1().setVisible(true);
+                new Story0().setVisible(true);
             }
         });
     }

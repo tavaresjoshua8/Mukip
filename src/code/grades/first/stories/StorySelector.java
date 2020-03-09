@@ -5,7 +5,7 @@
  */
 package code.grades.first.stories;
 
-import code.grades.first.stories.story1.Story1;
+import code.grades.first.stories.story1.*;
 import code.util.helpers.selector.Activity;
 import code.util.controllers.HistorialController;
 
@@ -18,7 +18,8 @@ public class StorySelector extends javax.swing.JFrame {
     private int act = 0;
     // Games list
     Activity[] activities = {
-        new Activity("Mi día de suerte", "miDiaDeSuerte", new Story1())
+        new Activity("Mi día de suerte", "miDiaDeSuerte", new Story0()),
+        new Activity("Ardilla miedosa", "scarySandy", new Story1())
     };
     /**
      * Creates new form GameSelector
