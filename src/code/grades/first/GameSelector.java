@@ -7,7 +7,7 @@ package code.grades.first;
 
 import code.grades.first.alphabet.Alphabet;
 import code.grades.first.math.MathGameSelector;
-import code.menu.InWorkFrame;
+import code.grades.first.numbers.Numbers;
 import code.grades.first.spanish.Write.Mariposa;
 import code.grades.first.stories.StorySelector;
 import code.util.helpers.selector.Activity;
@@ -27,7 +27,7 @@ public class GameSelector extends javax.swing.JFrame {
         new Activity("Matemáticas", "matematicas", new MathGameSelector()),
         new Activity("Cuentos", new StorySelector()),
         new Activity("Abecedario", new Alphabet()),
-        new Activity("Números", "numeros", new InWorkFrame())
+        new Activity("Números", "numeros", new Numbers())
     };
     /**
      * Creates new form GameSelector

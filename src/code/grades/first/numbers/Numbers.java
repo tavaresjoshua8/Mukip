@@ -6,10 +6,13 @@
 package code.grades.first.numbers;
 
 
-import code.util.helpers.selector.Letter;
 import code.util.Sound;
+import code.util.helpers.paths.SoundPath;
+import code.util.helpers.selector.Number;
 import java.awt.Color;
 import static java.awt.Color.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 /**
  *
@@ -17,14 +20,14 @@ import static java.awt.Color.*;
  */
 public class Numbers extends javax.swing.JFrame {
     
-    private int numLetra = 0;
-    private Letter[] letters = new Letter[10];
+    private int numNumber = 0;
+    private Number[] numbers = new Number[10];
 
     /**
      * Creates new form ADeAbeja
      */
     public Numbers() {
-        String[] references = {
+        String[] names = {
             "UNO (1)","DOS (2)","TRES (3)","CUATRO (4)",
             "CINCO (5)","SEIS (6)","SIETE (7)",
             "OCHO (8)","NUEVE (9)", "DIEZ (10)"
@@ -32,15 +35,24 @@ public class Numbers extends javax.swing.JFrame {
         Color[] colors = {
             RED,GREEN,BLUE,YELLOW,
             CYAN,MAGENTA,GREEN,
-            RED,YELLOW,GREEN,
+            RED,YELLOW,GREEN
         };
         
         int j = 0;
         for (char i = 'a'; i <= 'j'; i++) {
-            letters[j] = new Letter(i, references[j], colors[j]);
+            numbers[j] = new Number(names[j], i, colors[j]);
             j++;
         }
         initComponents();
+        
+        this.play.setVisible(false);
+        
+        addComponentListener(new ComponentAdapter(){
+            @Override
+            public void componentShown(ComponentEvent e){
+                Sound.play( new SoundPath("bgSound").inFolder("grades/first/numbers") );
+            }
+        });
     }
     
     /**
@@ -134,41 +146,39 @@ public class Numbers extends javax.swing.JFrame {
 
     private void rightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rightMouseClicked
         // TODO add your handling code here:
-        numLetra++;
-        if(numLetra > (letters.length - 1) ) numLetra = 0;
+        numNumber++;
+        if(numNumber > (numbers.length - 1) ) numNumber = 0;
         
-        updateLetter();
+        updateNumber();
     }//GEN-LAST:event_rightMouseClicked
 
     private void leftMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leftMouseClicked
         // TODO add your handling code here:
-        numLetra--;
-        if(numLetra < 0) numLetra = letters.length - 1;
+        numNumber--;
+        if(numNumber < 0) numNumber = numbers.length - 1;
         
-        updateLetter();
+        updateNumber();
     }//GEN-LAST:event_leftMouseClicked
 
-    public void updateLetter(){
-        Letter letter = letters[numLetra];
+    public void updateNumber(){
+        Number number = numbers[numNumber];
         
-        title.setText( letter.getReference() );
-        title.setForeground( letter.color );
-        jPanel1.setBackground( letter.color );
+        title.setText( number.name );
+        title.setForeground( number.color );
+        jPanel1.setBackground( number.color );
+        
+        System.out.println(image.getIcon().toString());
+        
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                letter.getImagePath()
+                number.getImagePath()
         )));
         
-        playSound(letter);
+        System.out.println(number.getImagePath());
     }
     
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // TODO add your handling code here:
-        playSound(letters[numLetra]);
     }//GEN-LAST:event_playActionPerformed
-
-    public void playSound(Letter letter){
-        Sound.play( letter.getSound() );
-    }
     
     /**
      * @param args the command line arguments
