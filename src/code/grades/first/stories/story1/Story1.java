@@ -6,6 +6,7 @@
 package code.grades.first.stories.story1;
 
 import code.util.Sound;
+import code.util.controllers.HistorialController;
 import code.util.helpers.stories.ScarySandy;
 
 /**
@@ -63,6 +64,7 @@ public class Story1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         image = new javax.swing.JLabel();
+        back = new javax.swing.JLabel();
         bgCuentos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -111,6 +113,15 @@ public class Story1 extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 700, 450));
 
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/salir.png"))); // NOI18N
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
         bgCuentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/bgCuentos.jpg"))); // NOI18N
         getContentPane().add(bgCuentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 1110, -1));
 
@@ -137,6 +148,11 @@ public class Story1 extends javax.swing.JFrame {
         
         updatePage();
     }//GEN-LAST:event_rightMouseClicked
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        HistorialController.back();
+    }//GEN-LAST:event_backMouseClicked
 
     public void playSound(ScarySandy page){
         Sound.stop();
@@ -180,6 +196,7 @@ public class Story1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel back;
     private javax.swing.JLabel bgCuentos;
     private javax.swing.JLabel image;
     private javax.swing.JPanel jPanel1;

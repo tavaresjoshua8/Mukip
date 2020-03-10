@@ -5,17 +5,13 @@
  */
 package code.grades.first.spanish.Write;
 
-import code.menu.Home;
+import code.util.Sound;
 import code.util.controllers.HistorialController;
+import code.util.helpers.paths.SoundPath;
 import java.awt.Color;
-import java.io.IOException;
 import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.JLabel;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
 
 
 /**
@@ -46,7 +42,6 @@ public class Mariposa extends javax.swing.JFrame {
         instr = new javax.swing.JLabel();
         maripsa = new javax.swing.JLabel();
         expresion = new javax.swing.JLabel();
-        siguiente = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         o = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -59,6 +54,7 @@ public class Mariposa extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -88,18 +84,6 @@ public class Mariposa extends javax.swing.JFrame {
 
         expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/expresion1.PNG"))); // NOI18N
         getContentPane().add(expresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
-
-        siguiente.setBackground(new java.awt.Color(255, 255, 255));
-        siguiente.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        siguiente.setForeground(new java.awt.Color(0, 102, 102));
-        siguiente.setText(">");
-        siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, 170, 40));
 
         jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -213,6 +197,14 @@ public class Mariposa extends javax.swing.JFrame {
         title.setText("Escribamos!");
         getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/miniRight.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, -1, -1));
+
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
@@ -254,11 +246,7 @@ public class Mariposa extends javax.swing.JFrame {
     public void volver() {
         HistorialController.back();
     }
-    
-    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        HistorialController.next( new Galleta() );
-    }//GEN-LAST:event_siguienteActionPerformed
-    Icon icono;
+        Icon icono;
     public void verificar() throws InterruptedException{
         javax.swing.JTextField[] campos = {M, i, o};
         String[] respuestas = {"M", "I", "O"};
@@ -274,21 +262,6 @@ public class Mariposa extends javax.swing.JFrame {
         }
         
         expresion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/expressions/" + icon + ".gif")));
-    }
-    
-    public void playSound(String soundName, String soundExt){
-        try {
-            Clip sound = AudioSystem.getClip();
-            sound.open(
-                    AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
-                            String.format("/resources/sounds/main/%s.%s", soundName, soundExt)
-                    ))
-            );
-            sound.start();
-            Thread.sleep(100);
-        } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
-            System.out.println(e.getMessage());
-        }
     }
     
     public void reiniciar(){
@@ -404,9 +377,15 @@ public class Mariposa extends javax.swing.JFrame {
         instr.setText("");
         maripsa.setForeground(Color.GREEN);
         maripsa.setText("Mariposa");
-        playSound("mariposa","wav");
+        
+        Sound.play( new SoundPath("mariposa").inFolder("main") );
         
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        HistorialController.next( new Galleta() );
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -453,6 +432,7 @@ public class Mariposa extends javax.swing.JFrame {
     private javax.swing.JTextField i;
     private javax.swing.JLabel inslabel;
     private javax.swing.JLabel instr;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
@@ -467,7 +447,6 @@ public class Mariposa extends javax.swing.JFrame {
     private javax.swing.JLabel maripsa;
     private javax.swing.JMenuBar menu;
     private javax.swing.JTextField o;
-    private javax.swing.JButton siguiente;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 

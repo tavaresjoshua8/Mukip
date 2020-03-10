@@ -13,6 +13,7 @@ import java.awt.Color;
 import static java.awt.Color.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import code.util.controllers.HistorialController;
 
 /**
  *
@@ -73,6 +74,7 @@ public class Numbers extends javax.swing.JFrame {
         play = new javax.swing.JButton();
         left = new javax.swing.JLabel();
         right = new javax.swing.JLabel();
+        back = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -137,6 +139,15 @@ public class Numbers extends javax.swing.JFrame {
         });
         getContentPane().add(right, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 270, -1, -1));
 
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/salir.png"))); // NOI18N
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/bgNumbers.jpg"))); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 660));
 
@@ -167,18 +178,19 @@ public class Numbers extends javax.swing.JFrame {
         title.setForeground( number.color );
         jPanel1.setBackground( number.color );
         
-        System.out.println(image.getIcon().toString());
-        
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
                 number.getImagePath()
         )));
-        
-        System.out.println(number.getImagePath());
     }
     
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_playActionPerformed
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        HistorialController.back();
+    }//GEN-LAST:event_backMouseClicked
     
     /**
      * @param args the command line arguments
@@ -219,6 +231,7 @@ public class Numbers extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel back;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel image;
     private javax.swing.JPanel jPanel1;

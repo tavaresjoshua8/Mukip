@@ -42,6 +42,7 @@ public class MathGameSelector extends javax.swing.JFrame {
         sugar = new javax.swing.JLabel();
         volver = new javax.swing.JLabel();
         activityPanel = new javax.swing.JLabel();
+        back = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,6 +107,15 @@ public class MathGameSelector extends javax.swing.JFrame {
         activityPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/math/mathSelector.png"))); // NOI18N
         getContentPane().add(activityPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 700, 490));
 
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/salir.png"))); // NOI18N
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/math/bg.jpg"))); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -80, 1000, 830));
 
@@ -142,6 +152,11 @@ public class MathGameSelector extends javax.swing.JFrame {
         // TODO add your handling code here:
         HistorialController.back();
     }//GEN-LAST:event_volverMouseClicked
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        HistorialController.back();
+    }//GEN-LAST:event_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -184,6 +199,7 @@ public class MathGameSelector extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel activityPanel;
     private javax.swing.JLabel apple;
+    private javax.swing.JLabel back;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel leaf;
     private javax.swing.JLabel milk;

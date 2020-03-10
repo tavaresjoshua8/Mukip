@@ -24,6 +24,7 @@ import javax.swing.JOptionPane;
 public abstract class Sound {
     
     private static Clip sound;
+    public static SoundPath actualSound;
     
     public static void play(SoundPath path) {
         // If other clip are reproducing
@@ -31,14 +32,19 @@ public abstract class Sound {
         
         try {
             sound = AudioSystem.getClip();
-            // read audio data from whatever source (file/classloader/etc.)
-            InputStream audioSrc = Sound.class.getResourceAsStream(path.getFullPath());
-            // add buffer for mark/reset support
-            InputStream bufferedIn = new BufferedInputStream(audioSrc);
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(bufferedIn);
             
+            // Read audio data from whatever source (file/classloader/etc.)
+            InputStream audioSrc = Sound.class.getResourceAsStream( path.getFullPath() );
+            
+            // Add buffer for mark/reset support
+            InputStream bufferedIn = new BufferedInputStream( audioSrc );
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream( bufferedIn );
+            
+            // Open Audio
             sound.open(audioStream);
             sound.start();
+            
+            actualSound = path;
         } catch (LineUnavailableException | UnsupportedAudioFileException ex) {
             JOptionPane.showMessageDialog(null, ex);
         } catch (IOException ex){

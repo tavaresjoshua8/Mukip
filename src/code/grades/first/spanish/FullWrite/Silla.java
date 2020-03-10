@@ -35,8 +35,6 @@ public class Silla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        volver = new javax.swing.JButton();
-        siguiente = new javax.swing.JButton();
         a = new javax.swing.JTextField();
         s = new javax.swing.JTextField();
         i = new javax.swing.JTextField();
@@ -49,6 +47,8 @@ public class Silla extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -61,28 +61,6 @@ public class Silla extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        volver.setBackground(new java.awt.Color(255, 255, 255));
-        volver.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        volver.setForeground(new java.awt.Color(0, 102, 102));
-        volver.setText("<");
-        volver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverActionPerformed(evt);
-            }
-        });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 580, 170, 40));
-
-        siguiente.setBackground(new java.awt.Color(255, 255, 255));
-        siguiente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        siguiente.setForeground(new java.awt.Color(0, 102, 102));
-        siguiente.setText(">");
-        siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 580, 170, 40));
 
         a.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -170,6 +148,22 @@ public class Silla extends javax.swing.JFrame {
         title.setText("Escribamos!");
         getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 840, 60));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/miniLeft.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/miniRight.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 560, -1, -1));
+
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
@@ -211,10 +205,6 @@ public class Silla extends javax.swing.JFrame {
         HistorialController.back();
     }
     
-    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        volver();
-    }//GEN-LAST:event_volverActionPerformed
-
     public void verificar(){
         String q = s.getText();
         String w = i.getText();
@@ -381,9 +371,15 @@ public class Silla extends javax.swing.JFrame {
         reiniciar();
     }//GEN-LAST:event_LKeyReleased
 
-    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        HistorialController.back();
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
         HistorialController.next( new Finish() );
-    }//GEN-LAST:event_siguienteActionPerformed
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -429,8 +425,10 @@ public class Silla extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JLabel expresion;
     private javax.swing.JTextField i;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
@@ -440,8 +438,6 @@ public class Silla extends javax.swing.JFrame {
     private javax.swing.JTextField l;
     private javax.swing.JMenuBar menu;
     private javax.swing.JTextField s;
-    private javax.swing.JButton siguiente;
     private javax.swing.JLabel title;
-    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }

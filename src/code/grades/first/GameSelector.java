@@ -13,6 +13,9 @@ import code.grades.first.stories.StorySelector;
 import code.util.helpers.selector.Activity;
 import code.util.controllers.HistorialController;
 import code.util.Sound;
+import code.util.helpers.paths.SoundPath;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 /**
  *
@@ -34,6 +37,15 @@ public class GameSelector extends javax.swing.JFrame {
      */
     public GameSelector() {
         initComponents();
+        
+        this.addComponentListener(new ComponentAdapter(){
+            @Override
+            public void componentShown(ComponentEvent e){
+                SoundPath bgSound = new SoundPath("menuSoundtrack").inFolder("main");
+                if( !( Sound.actualSound.equals(bgSound) ) )
+                    Sound.play(bgSound);
+            }
+        });
     }
     
     /**

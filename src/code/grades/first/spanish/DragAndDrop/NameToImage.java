@@ -6,15 +6,10 @@
 package code.grades.first.spanish.DragAndDrop;
 
 import code.grades.first.spanish.FullWrite.Gato;
-import code.grades.first.spanish.Options.Conejo;
-import code.menu.Home;
+import code.util.Sound;
 import code.util.controllers.HistorialController;
+import code.util.helpers.paths.SoundPath;
 import java.awt.Color;
-import java.io.IOException;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
 
 
 /**
@@ -319,23 +314,8 @@ public class NameToImage extends javax.swing.JFrame {
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
-        playSound("ahh","wav");
+        Sound.play( new SoundPath("ahh").inFolder("main") );
     }//GEN-LAST:event_jLabel9MouseClicked
-
-    public void playSound(String soundName, String soundExt){
-        try {
-            Clip sound = AudioSystem.getClip();
-            sound.open(
-                    AudioSystem.getAudioInputStream(getClass().getResourceAsStream(
-                            String.format("/resources/sounds/main/%s.%s", soundName, soundExt)
-                    ))
-            );
-            sound.start();
-            Thread.sleep(100);
-        } catch( IOException | InterruptedException | LineUnavailableException | UnsupportedAudioFileException e ) {
-            System.out.println(e.getMessage());
-        }
-    }
     
     /**
      * @param args the command line arguments

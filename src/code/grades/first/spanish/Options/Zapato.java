@@ -34,8 +34,6 @@ public class Zapato extends javax.swing.JFrame {
     private void initComponents() {
 
         grupoZapatoxD = new javax.swing.ButtonGroup();
-        volver = new javax.swing.JButton();
-        siguiente = new javax.swing.JButton();
         title = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -51,6 +49,8 @@ public class Zapato extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
         menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -63,28 +63,6 @@ public class Zapato extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        volver.setBackground(new java.awt.Color(255, 255, 255));
-        volver.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        volver.setForeground(new java.awt.Color(0, 102, 102));
-        volver.setText("<");
-        volver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverActionPerformed(evt);
-            }
-        });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 570, 170, 40));
-
-        siguiente.setBackground(new java.awt.Color(255, 255, 255));
-        siguiente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        siguiente.setForeground(new java.awt.Color(0, 102, 102));
-        siguiente.setText(">");
-        siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 570, 190, 40));
 
         title.setFont(new java.awt.Font("Tahoma", 1, 56)); // NOI18N
         title.setForeground(new java.awt.Color(0, 204, 204));
@@ -163,6 +141,22 @@ public class Zapato extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 310, 270));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/miniLeft.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 560, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/miniRight.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 560, -1, -1));
+
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/grades/first/spanish/backgrounds/paisaje4.jpg"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
 
@@ -204,10 +198,6 @@ public class Zapato extends javax.swing.JFrame {
         HistorialController.back();
     }
     
-    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        volver();
-    }//GEN-LAST:event_volverActionPerformed
-
     public void verificar(){
         if(z1.isSelected()){
             n.setForeground(Color.RED);
@@ -229,10 +219,6 @@ public class Zapato extends javax.swing.JFrame {
         }
     }
     
-    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        HistorialController.next( new Conejo() );
-    }//GEN-LAST:event_siguienteActionPerformed
-
     private void MenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuPrincipalActionPerformed
         // TODO add your handling code here:
         HistorialController.nextMain();
@@ -262,6 +248,16 @@ public class Zapato extends javax.swing.JFrame {
         // TODO add your handling code here:
         verificar();
     }//GEN-LAST:event_z3ActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        HistorialController.back();
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+        HistorialController.next( new Conejo() );
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -306,6 +302,8 @@ public class Zapato extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JLabel expresion;
     private javax.swing.ButtonGroup grupoZapatoxD;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -319,9 +317,7 @@ public class Zapato extends javax.swing.JFrame {
     private javax.swing.JLabel m;
     private javax.swing.JMenuBar menu;
     private javax.swing.JLabel n;
-    private javax.swing.JButton siguiente;
     private javax.swing.JLabel title;
-    private javax.swing.JButton volver;
     private javax.swing.JRadioButton z1;
     private javax.swing.JRadioButton z2;
     private javax.swing.JRadioButton z3;

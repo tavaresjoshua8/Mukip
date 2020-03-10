@@ -7,8 +7,12 @@ package code.grades.first.alphabet;
 
 import code.util.helpers.selector.Letter;
 import code.util.Sound;
+import code.util.controllers.HistorialController;
 import java.awt.Color;
 import static java.awt.Color.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -61,6 +65,7 @@ public class Alphabet extends javax.swing.JFrame {
         left = new javax.swing.JLabel();
         right = new javax.swing.JLabel();
         play1 = new javax.swing.JButton();
+        back = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -121,6 +126,15 @@ public class Alphabet extends javax.swing.JFrame {
         play1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(play1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 540, 110, 110));
 
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/salir.png"))); // NOI18N
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/main/backgrounds/bgAbecedario.jpg"))); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -290, -1, -1));
 
@@ -150,17 +164,23 @@ public class Alphabet extends javax.swing.JFrame {
         title.setText( letter.getReference() );
         title.setForeground( letter.color );
         jPanel1.setBackground( letter.color );
+        
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-                letter.getImagePath()
+            letter.getImagePath()
         )));
         
-        playSound(letter);
+        // playSound(letter);
     }
     
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
         // TODO add your handling code here:
         playSound(letters[numLetra]);
     }//GEN-LAST:event_playActionPerformed
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        HistorialController.back();
+    }//GEN-LAST:event_backMouseClicked
 
     public void playSound(Letter letter){
         Sound.play( letter.getSound() );
@@ -203,6 +223,7 @@ public class Alphabet extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel back;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel image;
     private javax.swing.JPanel jPanel1;
